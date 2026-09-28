@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<meta name="generator" content="qitianjia-guoqing-quiet-travel 5.1.0">
+<title>示例市两日人文轻松游（示例数据）</title>
+<style>
+/* 七天假 · 晴日出游。自包含旅行页面，无外部字体与图像依赖。 */
+:root{
+ --paper:#f7f6f0;--paper-2:#efeee5;--card:#fffefa;--ink:#273a40;--ink-2:#4a5b60;--muted:#68777b;--line:#e4e7df;--line-2:#cbd4cd;
+ --teal:#2d6574;--teal-deep:#244f5c;--teal-ink:#203e48;--teal-soft:#e9f2f3;
+ --sun:#b35130;--sun-soft:#fff1e4;--rose:#a05f66;--rose-soft:#f8eaeb;--moss:#778c58;--moss-soft:#f0f3e6;
+ --ok:#3f6b4d;--ok-soft:#eef4e9;--warn:#a44535;--warn-soft:#fff0e9;--gray-soft:#eff1ed;
+ --c1:#2d6574;--c2:#b35130;--c3:#627b98;--c4:#a05f66;--c5:#778c58;--c6:#887394;--c-other:#7b8585;
+ --r:22px;--r-s:12px;--shadow:0 8px 28px -18px #344e4020;
+ --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+ --serif:"Songti SC","STSong","Noto Serif SC",Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.75 var(--sans)}
+a{color:var(--teal);text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}button,input{font:inherit}button,a,input,summary{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #c77437;outline-offset:4px}
+h1,h2,h3,h4,p{margin:0}ul,ol{margin:6px 0;padding-left:1.25em}li::marker{color:var(--teal)}
+.small{font-size:13px;color:var(--muted)}.mono{font-variant-numeric:tabular-nums}.wrap{max-width:1240px;margin:auto;padding:0 30px 32px}.skip{position:absolute;left:-9999px;top:8px;background:white;padding:12px;z-index:99}.skip:focus{left:12px}
+/* 封面 */
+.masthead{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line-2);gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink)}.brand:hover{text-decoration:none}.brand-mark{width:36px;height:36px;color:var(--sun)}.brand b{font-size:22px;letter-spacing:.04em}.brand small{font-size:11px;color:var(--muted);padding-left:12px;margin-left:2px;border-left:1px solid var(--line-2);letter-spacing:.18em}
+.mast-note{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}.mast-note i{width:6px;height:6px;border-radius:50%;background:var(--moss)}
+.hero{position:relative;padding-top:48px}.hero-grid{display:grid;grid-template-columns:1.04fr 1fr;align-items:center;gap:46px}
+.hero-copy{padding:12px 0 18px}.kicker{display:flex;align-items:center;gap:10px;color:var(--sun);font-size:12px;font-weight:650;letter-spacing:.12em;margin-bottom:22px}.kicker::before{content:"";width:26px;height:1px;background:var(--sun)}
+.hero h1{font:650 clamp(34px,4.1vw,56px)/1.24 var(--sans);letter-spacing:-.04em;text-wrap:balance;max-width:12em}.hero .tagline{margin-top:22px;font-size:16px;color:var(--ink-2);max-width:33em;line-height:1.9}
+.hero-actions{display:flex;align-items:center;gap:24px;margin-top:28px;flex-wrap:wrap}.primary-link{display:inline-flex;align-items:center;gap:28px;border-radius:999px;background:var(--teal-deep);color:white;padding:13px 22px;font-size:14px;font-weight:600;transition:background .2s,transform .2s}.primary-link:hover{background:#346677;text-decoration:none;transform:translateY(-2px)}.primary-link span{font-size:20px;line-height:1}.secondary-link{font-size:13px;border-bottom:1px solid var(--line-2);padding-bottom:2px;color:var(--ink-2)}
+.holiday-art{position:relative;margin:0;padding:14px 14px 44px;background:#fffefa;border:1px solid #e1e4d9;border-radius:8px;transform:rotate(2deg);box-shadow:0 20px 38px -27px #48595366;isolation:isolate}.holiday-art>svg{display:block;width:100%;height:auto;border-radius:3px}.holiday-art figcaption{position:absolute;bottom:12px;left:22px;font-family:var(--serif);font-size:15px;color:var(--ink-2);letter-spacing:.15em}.postcard-mark{position:absolute;right:18px;bottom:8px;width:62px;height:32px;color:#6e8a8d;transform:rotate(-8deg)}
+.stubs{list-style:none;padding:22px 0;margin:42px 0 0;display:grid;grid-template-columns:1fr 1.8fr 1fr 1.45fr;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);gap:0}.stubs li{min-width:0;padding:0 26px;border-left:1px solid var(--line-2)}.stubs li:first-child{padding-left:0;border:0}.stubs .lab{display:block;font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:6px}.stubs .val{display:block;font-size:15px;font-weight:600;line-height:1.65;overflow-wrap:anywhere}
+.route-strip{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:center;gap:26px;padding:16px 0 12px}.route-caption{color:var(--muted);font-size:11px;letter-spacing:.12em}.route-caption strong{display:block;font-size:14px;color:var(--ink);letter-spacing:0;font-weight:550}.route svg{display:block;width:100%;height:auto;max-height:86px;overflow:visible}.route .rp{fill:none;stroke:var(--teal);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}.route .rp-ghost{fill:none;stroke:#cad8d7;stroke-width:2;stroke-dasharray:1 8}.route .node circle{fill:var(--teal);stroke:var(--paper);stroke-width:3}.route .node text{font:650 12px var(--sans);fill:#fff;text-anchor:middle;dominant-baseline:central}.route .node .lab{font:500 11px var(--sans);fill:var(--ink-2);dominant-baseline:hanging}.route .node.end circle{fill:var(--sun)}.route .node.end .lab{fill:var(--ink-2)}
+.notice{background:var(--sun-soft);border:1px solid #eadac8;border-radius:12px;padding:14px 18px;font-size:13px;color:#76563b;margin:8px 0 24px;line-height:1.8}.notice.ok{background:var(--ok-soft);border-color:#d5e1cd;color:var(--ok)}.notice strong{font-weight:600}.notice a{text-decoration:underline}.notice .must{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px}.notice .must span{font-size:12px}
+/* 整页导航与正文 */
+.layout{display:block}.side{position:sticky;top:0;z-index:10;background:rgba(247,246,240,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:34px}.side h2,.side>.prog-wrap{display:none}.side ul{list-style:none;margin:0;padding:0;display:flex;justify-content:space-between;gap:8px}.side li{min-width:0}.side li a{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);padding:6px 12px;border-radius:8px;white-space:nowrap}.side li a:hover{background:var(--teal-soft);text-decoration:none}.side .n{font:500 11px/1 var(--sans);color:var(--sun)}
+.main{min-width:0;max-width:1040px;margin:auto;overflow-wrap:anywhere}.card{border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:34px 38px;margin-bottom:28px;box-shadow:var(--shadow)}.section-label{font-size:10px;letter-spacing:.18em;color:var(--sun);font-weight:650;margin-bottom:7px}.card>h2{font-size:28px;letter-spacing:-.035em;line-height:1.35;margin-bottom:26px}.card h3{font-size:18px;font-weight:600;margin:26px 0 14px;color:var(--ink)}
+.badge{display:inline-flex;align-items:center;padding:2px 7px;font-size:11px;line-height:1.6;border-radius:5px;font-weight:500;background:var(--gray-soft);color:var(--muted);white-space:normal}.b-verified{background:var(--ok-soft);color:var(--ok)}.b-conditional,.b-booking.pending_user,.b-booking.not_open,.b-booking.unknown,.b-booking.user_claimed{background:var(--sun-soft);color:#87572d}.b-booking{background:var(--teal-soft);color:var(--teal)}.b-blocked,.b-booking.failed{background:var(--warn-soft);color:var(--warn)}.b-locked{background:#e9edf1;color:#536876}.b-kind{background:transparent;color:var(--muted);padding-left:0}
+/* 避拥挤判断保持可见；次要资料按需展开 */
+.quiet-panel{padding:26px;background:#f1f6f5;border:1px solid #dfe9e5;border-radius:16px;margin-bottom:24px}.quiet-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.quiet-eyebrow{font-size:12px;color:var(--teal);font-weight:650}.quiet-asof{font-size:11px;color:var(--muted)}.quiet-panel h3{margin:14px 0 18px;font-size:23px;letter-spacing:-.025em;line-height:1.55;max-width:32em}.quiet-risks{display:flex;gap:12px;margin-bottom:18px}.quiet-risks>div{display:flex;gap:15px;align-items:center;padding:7px 12px;background:var(--card);border-radius:8px;border:1px solid #dce5df;min-width:0}.quiet-risks small{font-size:12px;color:var(--ink-2)}.quiet-risks strong{font-size:12px;font-weight:650}.risk-low{color:var(--ok)}.risk-moderate{color:#94682f}.risk-high{color:var(--warn)}.risk-unknown{color:var(--muted)}
+.quiet-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-top:16px;border-top:1px solid #d7e3dd}.quiet-row{font-size:13px;color:var(--ink-2);line-height:1.8}.quiet-row>b{font-size:12px;color:var(--teal);display:block;margin-bottom:8px}.quiet-row ul{padding-left:1.1em;margin:0}.quiet-row li+li{margin-top:7px}.quiet-evidence{margin-top:18px;border-top:1px solid #d7e3dd;padding-top:12px;font-size:12px;color:var(--ink-2)}.quiet-evidence summary{cursor:pointer;color:var(--teal)}.quiet-evidence li{margin:10px 0}
+.overview-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:22px 0;padding:13px 0}.overview-details>summary{cursor:pointer;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;list-style:none}.overview-details>summary::-webkit-details-marker{display:none}.overview-details>summary::after{content:"＋";color:var(--teal);font-size:17px;line-height:1}.overview-details[open]>summary::after{content:"−"}.overview-details[open]>summary{margin-bottom:20px;color:var(--ink)}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.tile{min-width:0;border-bottom:1px solid var(--line);padding-bottom:12px}.tile .lab{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}.tile .val{font-size:13px;color:var(--ink-2);display:block}.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}.callout{background:var(--paper);border-radius:12px;padding:16px}.callout h4{font-size:13px;margin-bottom:8px}.callout ul{font-size:13px;color:var(--ink-2);margin:0}.lock-list{list-style:none;padding:0;display:grid;gap:8px}.lock-list li{display:flex;gap:10px;align-items:flex-start;font-size:13px;background:var(--paper);padding:12px 15px;border-radius:9px}
+/* 每日概览卡 */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(215px,1fr);gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px}.strip::-webkit-scrollbar{height:5px}.strip::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:5px}
+.dcard{position:relative;display:block;padding:24px;border:1px solid #dbe5e2;border-radius:16px;background:#edf4f2;color:var(--ink);scroll-snap-align:start;transition:transform .2s}.dcard:nth-child(2n){background:#fff0e3;border-color:#efdfce}.dcard:nth-child(3n){background:#f1f0f7;border-color:#e1dfec}.dcard:hover{transform:translateY(-3px);text-decoration:none}.dcard .dn{font-size:32px;font-weight:600;color:var(--teal);line-height:1.2;letter-spacing:-.04em}.dcard:nth-child(2n) .dn{color:var(--sun)}.dcard .dd{font-size:11px;color:var(--muted);margin-top:5px}.dcard .dt{font-size:17px;font-weight:600;line-height:1.55;margin:20px 0 6px}.dcard .dr{font-size:12px;color:var(--ink-2)}.dcard .dots{display:flex;gap:4px;position:absolute;right:23px;top:30px}.dcard .dots i{width:5px;height:5px;border-radius:50%;background:#c6d1c9}.dcard.int-light .dots i:first-child,.dcard.int-moderate .dots i:nth-child(-n+2),.dcard.int-heavy .dots i{background:var(--sun)}
+/* 行程切换与时间线 */
+.daynav{display:none;position:sticky;top:64px;z-index:8;gap:8px;flex-wrap:wrap;padding:9px;background:rgba(255,254,250,.97);border:1px solid var(--line);border-radius:14px;margin-bottom:26px}.js .daynav:has(button){display:flex}.daynav button{cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:0;border-radius:9px;background:var(--paper);color:var(--ink-2);padding:11px 16px;line-height:1.3;font-size:13px}.daynav button small{font-size:10px;color:var(--muted)}.daynav button[aria-pressed="true"]{background:var(--teal-deep);color:white}.daynav button[aria-pressed="true"] small{color:#e0eef0}.daynav .showall{margin-left:auto;align-self:center;background:transparent;font-size:12px}.js .day.is-hidden{display:none}.day.enter{animation:day-enter .25s ease-out}.day+.day{border-top:1px solid var(--line);margin-top:32px;padding-top:30px}
+.day-head{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:center;margin-bottom:20px}.day-head .dn{grid-row:span 2;font-size:44px;line-height:1;color:var(--teal);font-weight:550;letter-spacing:-.05em}.day-head h3{margin:0;font-size:23px}.day-head .sub{font-size:12px;color:var(--muted);display:flex;gap:6px 12px;flex-wrap:wrap}.day-notes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}.day-notes span{background:var(--paper);padding:4px 10px;border-radius:6px;color:var(--ink-2);font-size:12px}
+.tl{list-style:none;margin:0;padding:0;position:relative;--tw:62px}.tl::before{content:"";position:absolute;left:calc(var(--tw) + 29px);top:17px;bottom:25px;width:1px;background:var(--line-2)}.ti{position:relative;display:grid;grid-template-columns:var(--tw) 40px minmax(0,1fr);gap:10px;padding-bottom:22px}.ti-time{text-align:right;font-size:12px;line-height:1.5;padding-top:10px;color:var(--muted);font-variant-numeric:tabular-nums}.ti-time .t1{display:block;font-size:15px;color:var(--ink);font-weight:600}.ti-time .dur{display:block;font-size:10px;margin-top:4px}.ti-node{display:flex;justify-content:center;position:relative;padding-top:7px}.ti-node .ico{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--teal-soft);border:4px solid var(--card);font-size:13px;box-sizing:content-box}
+.ti-card{padding:21px 24px;background:#fff;border:1px solid var(--line);border-radius:14px;min-width:0}.ti-head{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.ti-head h4{font-size:18px;font-weight:600;line-height:1.5;margin:0}.ti-head .badges{display:flex;flex-wrap:wrap;gap:4px}.ti-desc{font-size:14px;color:var(--ink-2);margin-top:12px;line-height:1.85}.ti-meta{display:grid;gap:5px;margin-top:14px;font-size:12px;color:var(--muted)}.ti-meta>div{display:flex;gap:6px;align-items:flex-start}.ti-meta .k{flex:0 0 auto}.ti-cost{font-size:12px;color:var(--muted);margin-top:10px}.ti-tips{font-size:13px;color:var(--ink-2);line-height:1.8;margin-top:12px}.ti-tips li+li{margin-top:5px}.ti-tips li::marker{color:var(--sun)}.ti.vs-blocked .ti-card{border-color:#e4b5a9}.ti.vs-conditional .ti-card{border-left:3px solid #d09a60}.ti.locked .ti-node .ico{background:var(--teal-deep)}
+.ti.kind-transit .ti-card,.ti.kind-buffer .ti-card{border:0;background:transparent;padding:8px 0}.ti.kind-transit .ti-head h4,.ti.kind-buffer .ti-head h4{font-size:13px;color:var(--muted)}.ti.kind-transit .ti-desc,.ti.kind-buffer .ti-desc{font-size:12px;margin-top:5px}.ti.kind-transit .ti-node .ico,.ti.kind-buffer .ti-node .ico{background:var(--paper);font-size:11px;width:24px;height:24px;margin-top:3px}.leg-pill{display:inline-flex;flex-wrap:wrap;gap:5px 9px;padding:5px 9px;background:var(--paper);border-radius:6px;margin-top:8px;font-size:12px;color:var(--muted)}.leg-pill b{color:var(--ink-2)}.ti details{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}.ti summary{cursor:pointer;font-size:12px;color:var(--muted)}.ti details ul{font-size:12px;margin-top:8px}.copy-btn{display:none;margin-left:6px;border:1px solid var(--line-2);background:var(--card);font-size:10px;padding:1px 6px;border-radius:4px;cursor:pointer}.js .copy-btn{display:inline-block}
+.alt{position:relative;margin:5px 0 20px 122px;border:1px solid #eedbc7;background:#fff5e9;border-radius:13px;padding:18px 20px 18px 53px;font-size:13px;color:#73543c}.alt::before{content:"B";position:absolute;left:18px;top:20px;display:grid;place-items:center;width:23px;height:23px;border-radius:6px;background:#e7c298;color:#503b2a;font-size:12px;font-weight:700}.alt .t{font-weight:650}.alt .chain{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12px}.alt .chain span{background:#fffaf1;border:1px solid #ead8c6;border-radius:5px;padding:2px 6px}.alt .meta{font-size:11px;margin-top:8px;color:#806851}
+/* 住宿与预算 */
+.regions,.tickets,.weather{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px}.region,.ticket,.wx{padding:22px;border:1px solid var(--line);border-radius:14px;background:#fafbf7;min-width:0}.region.rec{background:#eff5f1;border-color:#dbe6dc}.region h4{font-size:17px;margin-bottom:12px}.region .row{display:grid;grid-template-columns:auto 1fr;gap:7px 12px;font-size:13px}.region dt{color:var(--muted)}.region dd{margin:0;color:var(--ink-2)}.ticket{display:grid;grid-template-columns:1fr auto;gap:12px;background:#f2f6f8;border-color:#dfe8ec}.ticket .ft{font-size:16px;font-weight:600;display:flex;flex-wrap:wrap;gap:10px}.ticket .arr{color:var(--sun)}.ticket .tm{display:flex;gap:22px;margin-top:12px;font-size:12px;color:var(--muted)}.ticket .tm b{display:block;font-size:14px;color:var(--ink)}.ticket .st{text-align:right;font-size:11px;color:var(--muted)}
+.sums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}.sum{padding:18px 15px;background:var(--paper);border-radius:12px;min-width:0}.sum .lab{font-size:11px;color:var(--muted)}.sum .val{font:600 21px/1.5 var(--sans);color:var(--teal-ink);margin:7px 0;letter-spacing:-.035em}.sum.hl .val{color:var(--sun)}.sum .sub{font-size:11px;color:var(--muted)}.bbar-wrap{position:relative;padding-top:18px;margin:12px 0}.bbar{display:flex;height:25px;border-radius:6px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}.bbar .seg{display:flex;align-items:center;justify-content:center;height:100%;font-size:10px;font-weight:550;color:white;overflow:hidden;border-right:2px solid white;white-space:nowrap}.bbar .seg.paid{background:repeating-linear-gradient(135deg,#59686b 0 6px,#74858a 6px 12px)}.bbar .seg.unk{background:repeating-linear-gradient(135deg,#deded4 0 6px,#efeee5 6px 12px);color:var(--ink)}.bbar-wrap .limit{position:absolute;top:12px;height:38px;width:2px;background:var(--warn);transform:translateX(-1px)}.bbar-wrap .limit::after{content:attr(data-label);position:absolute;right:0;top:-15px;font-size:10px;white-space:nowrap;color:var(--warn)}.legend{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted)}.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--paper);color:var(--muted);font-size:11px;font-weight:550;white-space:nowrap}tr:last-child td{border-bottom:0}.table-wrap{overflow-x:auto;overflow-wrap:normal;border:1px solid var(--line);border-radius:12px;-webkit-overflow-scrolling:touch}
+/* 出发前准备和证据 */
+.prog{height:5px;overflow:hidden;border-radius:5px;background:var(--paper-2)}.prog i{display:block;height:100%;width:0;background:var(--moss);transition:width .2s}.prog-txt{font-size:12px;color:var(--muted);margin-top:8px}.checklist{list-style:none;padding:0;display:grid;gap:10px;margin:18px 0}.checklist li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:15px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}.checklist li.done{background:var(--ok-soft)}.checklist li.done .act{text-decoration:line-through;color:var(--muted)}.checklist input{width:19px;height:19px;margin-top:4px;accent-color:var(--teal)}.checklist label{cursor:pointer}.pri{display:inline-block;padding:2px 7px;font-size:10px;border-radius:4px;margin-right:8px}.pri.must{background:var(--sun-soft);color:#855734}.pri.should{background:var(--teal-soft);color:var(--teal)}.pri.nice{background:var(--gray-soft);color:var(--muted)}.checklist .act{font-size:14px;line-height:1.7}.checklist .sub{display:block;font-size:12px;margin-top:5px;color:var(--muted)}.storage-note{font-size:11px;color:var(--muted)}.weather{margin-top:12px}.wx{background:#f0f5f8}.wx .lab{font-size:11px;color:var(--muted)}.wx ul{font-size:13px;margin-top:10px}
+.risks{list-style:none;padding:0;display:grid;gap:8px}.risks li{padding:12px 15px 12px 36px;border-radius:8px;background:var(--paper);font-size:13px;position:relative}.risks li::before{content:"!";position:absolute;left:15px;color:var(--sun);font-weight:600}.caps{display:flex;gap:6px;flex-wrap:wrap;padding:0;list-style:none}.caps li{border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:11px;color:var(--muted)}.caps .on{color:var(--ok);background:var(--ok-soft)}details.acc{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}details.acc summary{font-size:13px;cursor:pointer;color:var(--ink-2)}details.acc>*:not(summary){margin-top:14px}.versions{list-style:none;padding-left:17px;border-left:1px solid var(--line-2);font-size:12px}.versions li{position:relative;padding:0 0 12px 8px}.versions li::before{content:"";position:absolute;left:-21px;top:7px;width:7px;height:7px;background:var(--teal);border-radius:50%}
+.foot{padding:30px 12px 12px;text-align:center;font-size:11px;color:var(--muted);border-top:1px solid var(--line-2)}.foot .attr{font-weight:600;color:var(--ink);font-size:13px;margin-bottom:10px}.foot .small{font-size:10px;margin-top:7px}.totop{position:fixed;right:20px;bottom:20px;border:1px solid var(--line-2);border-radius:50%;background:var(--card);width:42px;height:42px;color:var(--teal);font-size:19px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:12}.totop.show{opacity:1;pointer-events:auto}[data-reveal]{opacity:1;transform:none}
+@keyframes day-enter{from{opacity:.65;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(max-width:950px){.wrap{padding:0 22px 25px}.hero-grid{gap:26px}.hero h1{font-size:38px}.stubs{grid-template-columns:1fr 1.6fr 1fr 1.4fr}.stubs li{padding:0 14px}.stubs .val{font-size:13px}.side li a{font-size:12px;padding:6px 5px}.card{padding:28px}.quiet-actions{gap:16px}.sums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){html{scroll-padding-top:74px}.wrap{padding:0 16px 24px}.masthead{height:74px}.brand b{font-size:20px}.brand-mark{width:30px;height:30px}.brand small{font-size:10px;padding-left:9px}.mast-note{display:none}.hero{padding-top:29px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-copy{padding:0}.kicker{margin-bottom:15px;font-size:11px}.hero h1{font-size:clamp(31px,7.7vw,43px);max-width:16em;letter-spacing:-.03em}.hero .tagline{font-size:14px;margin-top:17px}.hero-actions{margin-top:21px;gap:22px}.primary-link{font-size:13px;padding:11px 18px;gap:24px}.holiday-art{max-width:520px;width:calc(100% - 10px);justify-self:center;padding:9px 9px 35px;transform:rotate(1deg)}.holiday-art>svg{max-height:290px;object-fit:cover}.holiday-art figcaption{font-size:12px;left:16px;bottom:9px}.postcard-mark{width:50px;height:25px;bottom:5px}.stubs{margin-top:28px;padding:16px 0;grid-template-columns:1fr 1.6fr;gap:18px 0}.stubs li{padding:0 14px}.stubs li:nth-child(odd){padding-left:0;border:0}.stubs .lab{font-size:10px;margin-bottom:3px}.stubs .val{font-size:12px}.route-strip{grid-template-columns:1fr;gap:0;padding:13px 0 2px}.route-caption{display:none}.route svg{max-height:73px}.notice{font-size:12px;padding:12px 14px;margin-bottom:17px}.notice .must{font-size:11px;gap:6px}.notice .must span{font-size:11px}.side{margin:0 -16px 21px;padding:9px 16px;overflow-x:auto;scrollbar-width:none}.side ul{width:max-content;justify-content:flex-start;gap:12px}.side li a{font-size:12px;padding:6px 5px}.side .n{font-size:9px}.card{padding:23px 18px;border-radius:17px;margin-bottom:20px}.card>h2{font-size:25px;margin-bottom:21px}.section-label{font-size:9px}.quiet-panel{padding:18px;border-radius:12px}.quiet-panel h3{font-size:19px;margin:13px 0}.quiet-top{gap:5px}.quiet-asof{font-size:10px}.quiet-risks{gap:7px;flex-wrap:wrap}.quiet-risks>div{padding:5px 8px;gap:10px}.quiet-risks small,.quiet-risks strong{font-size:11px}.quiet-actions{grid-template-columns:1fr;gap:15px}.quiet-row{font-size:12px}.quiet-row>b{margin-bottom:5px}.quiet-row li+li{margin-top:4px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile .val{font-size:12px}.strip{grid-auto-columns:minmax(216px,78%);gap:12px}.dcard{padding:20px}.dcard .dt{font-size:16px;margin-top:16px}.daynav{top:54px;gap:5px;padding:6px;flex-wrap:nowrap;overflow-x:auto}.daynav button{flex-shrink:0;font-size:11px;padding:9px 11px}.daynav button small{font-size:9px}.daynav .showall{font-size:10px;white-space:nowrap}.day-head{gap:5px 12px}.day-head .dn{font-size:36px}.day-head h3{font-size:20px}.day-head .sub{font-size:10px;gap:5px 8px}.day-notes span{font-size:11px}.tl{--tw:44px}.tl::before{left:calc(var(--tw) + 18px)}.ti{grid-template-columns:var(--tw) 24px minmax(0,1fr);gap:6px;padding-bottom:17px}.ti-node .ico{width:20px;height:20px;font-size:11px;border-width:3px}.ti-time{font-size:10px;padding-top:9px}.ti-time .t1{font-size:12px}.ti-time .dur{font-size:9px}.ti-card{padding:15px 13px;border-radius:11px}.ti-head h4{font-size:16px}.ti-desc{font-size:13px;margin-top:10px}.ti-meta,.ti-cost{font-size:11px}.ti-tips{font-size:12px}.badge{font-size:9px;padding:2px 5px}.ti.kind-transit .ti-node .ico,.ti.kind-buffer .ti-node .ico{width:18px;height:18px}.alt{margin:0 0 18px 0;padding:16px 15px 16px 45px;font-size:12px}.alt::before{left:14px;top:17px}.ticket{grid-template-columns:1fr}.ticket .st{text-align:left}.region,.ticket,.wx{padding:18px}.checklist li{padding:15px 13px;gap:11px}.checklist .act{font-size:13px}.checklist .sub{font-size:11px}.sum{padding:14px 12px}.sum .val{font-size:18px}.callouts{grid-template-columns:1fr}.foot{font-size:10px}.foot .attr{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{body{background:white;color:black;font-size:11px}.wrap,.main{padding:0;max-width:none}.masthead{height:auto;padding-bottom:12px}.hero{padding-top:16px}.hero-grid{grid-template-columns:1fr 1fr;gap:20px}.hero h1{font-size:26px}.hero-actions,.side,.daynav,.totop,.copy-btn,.storage-note{display:none!important}.holiday-art{box-shadow:none;transform:none}.stubs{margin-top:20px}.card{border:1px solid #ccc;padding:20px;box-shadow:none;break-inside:auto}.quiet-panel{background:#f3f5f1}.js .day.is-hidden{display:block!important}.day{break-before:auto}.ti-card,.quiet-panel,.region{break-inside:avoid}.overview-details>*{display:block!important}.foot{padding-top:15px}.badge{border:1px solid #ccc}a{color:inherit}.holiday-art,.quiet-panel,.dcard{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/* 图文旅行手册：先看图与行动，按需展开资料。 */
+.holiday-art.photo-cover{padding:11px;transform:rotate(1deg);border-radius:15px}.photo-cover img{display:block;width:100%;height:auto;border-radius:8px}.holiday-art.photo-cover figcaption{position:static;bottom:auto;left:auto;margin:12px 7px 5px;font:12px/1.7 var(--sans);letter-spacing:0}.photo-label{display:block;font-size:9px;letter-spacing:.13em;color:var(--sun);margin-bottom:4px}.photo-cover figcaption strong{display:block;font-size:15px;font-weight:600;color:var(--ink)}.photo-credit{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:5px}.photo-credit a{color:inherit;border-bottom:1px solid var(--line-2)}
+.trip-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 24px}.trip-highlights>div{padding:17px 19px;border-left:3px solid var(--sun);background:var(--paper);border-radius:3px 12px 12px 3px}.trip-highlights b{font-size:15px}.trip-highlights p{font-size:13px;color:var(--ink-2);margin-top:7px;line-height:1.75}
+.photo-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 10px}.trip-photo{margin:0;min-width:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.trip-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;background:#edf0e9}.trip-photo figcaption{padding:13px 17px}.trip-photo figcaption strong{display:block;font-size:14px;font-weight:550;line-height:1.6}.photo-context{font-size:11px;color:var(--muted);margin:8px 0 22px}.day-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-bottom:24px}.day-photos img{max-height:360px}.day-lead{font-size:16px;line-height:1.8;color:var(--ink-2);margin:0 0 16px}.day-route{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:22px;padding:13px 16px;border-radius:12px;background:var(--teal-soft);font-size:12px}.day-route span{padding:4px 8px;background:#fff;border:1px solid #dce6e5;border-radius:7px;color:var(--teal-ink)}.day-route i{font-style:normal;color:var(--teal)}
+.item-brief{font-size:14px;line-height:1.85;color:var(--ink-2);margin-top:8px}.essential-tips{font-size:12px;line-height:1.7;color:#86532e;margin:8px 0 0;padding-left:1.15em}.essential-tips li+li{margin-top:4px}.item-detail{margin-top:13px!important;border-top:1px solid var(--line);padding-top:9px!important}.item-detail>summary{color:var(--muted);font-size:11px;cursor:pointer}.item-detail[open]>summary{margin-bottom:12px}.item-detail .badges{display:flex;flex-wrap:wrap;gap:4px}.supporting-item .ti-card{padding:7px 0 10px;border:0;background:transparent}.supporting-item .ti-head h4{font-size:14px;color:var(--ink-2)}.supporting-item .item-brief{font-size:12px;line-height:1.7}.supporting-item .item-detail{margin-top:5px!important;border-top:0;padding-top:0!important}.supporting-item .item-detail[open]{padding:13px!important;background:var(--paper);border-radius:9px}.supporting-item{padding-bottom:15px}.quiet-more{font-size:12px;color:var(--ink-2);margin-top:14px}.quiet-more>summary,.alt-detail>summary{cursor:pointer;color:var(--teal);font-size:12px}.quiet-more[open]>summary{margin-bottom:16px}.alt .chain{font-size:11px}.alt-detail{margin-top:8px}.alt-detail[open]>summary{margin-bottom:9px}.overview-unmet{font-size:12px;background:#fff6ec;border:1px solid #eddfcb;border-radius:10px;padding:13px 16px;margin-top:18px;color:#74573e}.overview-unmet b{font-weight:600}.overview-unmet ul{margin-bottom:0}
+@media(max-width:700px){.trip-highlights{grid-template-columns:1fr;gap:9px;margin-bottom:18px}.trip-highlights>div{padding:12px 14px}.trip-highlights b{font-size:14px}.trip-highlights p{font-size:12px;margin-top:3px}.photo-gallery{gap:10px}.trip-photo figcaption{padding:10px 11px}.trip-photo figcaption strong{font-size:12px}.photo-credit{font-size:9px}.photo-label{font-size:8px}.photo-gallery .trip-photo img{aspect-ratio:4/3}.photo-gallery .photo-credit{line-height:1.6}.day-lead{font-size:14px}.day-route{font-size:10px;padding:10px;gap:5px}.day-route span{padding:3px 6px}.day-photos img{max-height:240px}.item-brief{font-size:13px}.essential-tips{font-size:11px}.supporting-item .item-brief{font-size:12px}.photo-cover figcaption strong{font-size:14px}.quiet-more>summary{font-size:11px}}
+@media print{.trip-photo,.photo-cover{break-inside:avoid}.trip-photo img{max-height:240px}.item-detail>*{display:block!important}.supporting-item .ti-card{padding:8px 0}.photo-gallery{grid-template-columns:1fr 1fr}.day-photos{max-width:600px}}
+
+/* 跨城交通：说明全宽排布，避免费用文字挤占时间和地点。 */
+.tickets{align-items:stretch}.ticket{display:flex;flex-direction:column;gap:15px;min-width:0;padding:23px}.ticket>*{min-width:0}.ticket-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.ticket-mode{font-size:12px;color:var(--teal);font-weight:600;overflow-wrap:anywhere}.ticket-heading .badge{flex:0 0 auto}.ticket-route{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 10px;font-size:19px;font-weight:650;line-height:1.55;letter-spacing:-.02em}.ticket-route>span{max-width:100%;overflow-wrap:anywhere}.ticket-route .arr{font-size:16px;color:var(--sun)}.ticket-times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:14px 0;border-top:1px solid #dce5e8;border-bottom:1px solid #dce5e8}.ticket-times>div{min-width:0}.ticket-times dt{font-size:11px;color:var(--muted);margin-bottom:5px}.ticket-times dd{margin:0;font-size:14px;font-weight:550;line-height:1.7;overflow-wrap:anywhere}.ticket-note{font-size:12px;line-height:1.85;color:var(--ink-2)}.ticket-price{margin-top:auto;padding-top:13px;border-top:1px solid #dce5e8}.ticket-price b{font-size:11px;font-weight:550;color:var(--muted)}.ticket-price p{font-size:12px;margin-top:5px;line-height:1.85;color:var(--ink-2)}.transport-hint{margin-top:12px}
+/* 每个出行日占据一张卡；缺失数据也保留明确的等待状态。 */
+.weather-intro{font-size:12px;line-height:1.85;color:var(--muted);margin:-10px 0 20px}.weather-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.weather-day{display:flex;flex-direction:column;min-width:0;border:1px solid #dce7eb;border-radius:15px;background:#f0f6f8;padding:17px 15px;gap:9px}.weather-day-top{display:flex;align-items:center;justify-content:space-between;gap:5px;flex-wrap:wrap}.weather-day-top b{font-size:12px;font-weight:600}.weather-day-top>span{font-size:9px;color:var(--teal);border:1px solid #d1e1e5;background:#fff;padding:2px 5px;border-radius:4px}.weather-location{font-size:10px;color:var(--muted)}.weather-main{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:center;gap:9px;margin:4px 0}.weather-symbol{font-size:29px;color:var(--teal);line-height:1}.weather-main strong{font-size:17px;font-weight:600;line-height:1.4}.weather-temp{font-size:20px;color:var(--teal-ink);font-weight:650;line-height:1.5;letter-spacing:-.025em;margin-top:4px;overflow-wrap:anywhere}.weather-wind{font-size:10px;color:var(--muted)}.weather-advice{font-size:12px;color:var(--ink-2);line-height:1.8;margin-top:2px}.weather-source{align-self:flex-start;font-size:10px;margin-top:auto;padding-top:5px}.weather-detail{font-size:10px;color:var(--muted);border-top:1px solid #d9e4e6;padding-top:8px}.weather-detail summary{cursor:pointer}.weather-detail p{margin-top:6px}.weather-extended{background:#fcf5e9;border-color:#e5d9c6;border-style:dashed}.weather-extended .weather-day-top>span{color:#875d2e;border-color:#e5d9c6}.weather-unavailable{background:#f3f3ee;border-color:var(--line-2);border-style:dashed}.weather-unavailable .weather-temp{font-size:14px;color:var(--muted);font-weight:500}.weather-extended .weather-temp{font-size:14px;font-weight:500;color:#876537}.weather-pack{margin-top:18px;border:1px solid var(--line);border-radius:12px;padding:15px 18px;background:var(--paper)}.weather-pack>b{font-size:12px}.weather-pack ul{display:grid;gap:5px;margin:8px 0 0;padding-left:1.2em;font-size:12px;color:var(--ink-2)}
+@media(max-width:1000px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-day{padding:18px}.weather-main{grid-template-columns:34px minmax(0,1fr)}.weather-temp{font-size:23px}}
+@media(max-width:700px){.ticket{padding:18px;gap:12px}.ticket-route{font-size:17px}.ticket-times{gap:10px;padding:11px 0}.ticket-times dd{font-size:13px}.ticket-note,.ticket-price p{font-size:11px}.weather-grid{gap:10px}.weather-day{padding:14px 11px;border-radius:12px;gap:7px}.weather-day-top b{font-size:10px}.weather-day-top>span{font-size:8px}.weather-main{grid-template-columns:25px minmax(0,1fr);gap:7px}.weather-symbol{font-size:24px}.weather-main strong{font-size:15px}.weather-temp{font-size:20px}.weather-advice{font-size:11px}.weather-intro{font-size:11px}.weather-pack{padding:13px}.weather-extended .weather-temp,.weather-unavailable .weather-temp{font-size:12px}}
+@media print{.ticket,.weather-day{break-inside:avoid}.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-day{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+</style>
+</head>
+<body data-trip="2026-10-10-example-2d" data-version="1">
+<a class="skip" href="#days">跳到每日行程</a>
+<div class="wrap">
+
+<div class="masthead">
+  <a class="brand" href="#top" aria-label="七天假，回到封面">
+    <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="7" fill="currentColor"/><path d="M20 3v5m0 24v5M3 20h5m24 0h5M8 8l4 4m16 16 4 4M8 32l4-4m16-16 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <b>七天假</b><small>小众旅行计划</small>
+  </a>
+  <span class="mast-note"><i></i> 少些拥挤，多些风景</span>
+</div>
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">国庆 · 轻松出游</div>
+      <h1>示例市两日人文轻松游（示例数据）</h1>
+      <p class="tagline">一座博物馆、一条老街、一处园林、一片湖。</p>
+      <div class="hero-actions"><a class="primary-link" href="#days">翻开旅行计划 <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#checklist">出发前准备</a></div>
+    </div>
+        <figure class="holiday-art" aria-label="阳光、山野与公路组成的抽象旅行插画">
+      <svg viewBox="0 0 560 435" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="一辆小车驶过山野公路的装饰插画，不代表目的地实景">
+        <defs><clipPath id="landscape-clip"><rect width="560" height="435" rx="3"/></clipPath><linearGradient id="sky-color" x2="0" y2="1"><stop stop-color="#c8e0e8"/><stop offset="1" stop-color="#e5efeb"/></linearGradient></defs>
+        <g clip-path="url(#landscape-clip)">
+          <path fill="url(#sky-color)" d="M0 0h560v435H0z"/>
+          <circle cx="409" cy="91" r="43" fill="#f6c972"/><circle cx="409" cy="91" r="57" fill="none" stroke="#f3dba7" stroke-width="1.5" opacity=".8"/>
+          <g fill="#faf9ed" opacity=".9"><path d="M51 104c4-15 16-23 30-18 7-22 44-19 46 5 16-1 26 7 27 16H51z"/><path d="M240 50c2-9 13-14 22-10 9-18 35-14 39 6 11-2 22 3 25 9h-87z"/><path d="M475 148c4-10 14-16 27-12 6-19 34-21 44-1 13-1 23 8 26 15H475z"/></g>
+          <path d="M-10 260 77 153l64 69 94-106 121 144 85-99 131 112v162H-10z" fill="#96b9b2"/>
+          <path d="m161 199 74-83 80 95-59-24-24-26-21 34z" fill="#c3d6c8"/>
+          <path d="M-30 296c75-98 144-71 212-14s135 46 227-32 122-54 169 14v177H-30z" fill="#728f76"/>
+          <path d="M-30 359c85-83 150-101 245-63 100 40 164 12 226-26 55-34 100-30 145-1v172H-30z" fill="#aec29b"/>
+          <path d="M354 253c44-8 112 4 90 24-21 21-129 31-190 55s-65 68-18 111H60c-13-63 95-114 229-133 99-15 157-27 139-40-10-8-41-13-74-17z" fill="#f3e3bf"/>
+          <path d="M355 253c60 0 81 15 49 26-66 23-214 27-274 100-18 22-23 43-15 65" fill="none" stroke="#fff8e3" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="11 13"/>
+          <path d="M391 345c54-32 130-34 188-3v104H306c3-42 40-75 85-101z" fill="#4c7773"/>
+          <path d="M430 365c43-13 91-10 130 4M414 386c55-15 103-10 146 4M399 411c65-16 117-11 161 3" fill="none" stroke="#88aaa0" stroke-width="2" opacity=".7"/>
+          <g transform="translate(79 253)"><path d="M0 0v77" stroke="#6c6246" stroke-width="5"/><path d="M-31 26c-5-18 4-34 16-38-5-13 7-29 20-27 17 2 26 17 21 29 17 7 22 24 14 38-10 20-59 20-71-2" fill="#d6ad65"/><path d="m0 48-15-12M0 23l13-15" stroke="#a47d42" stroke-width="2" fill="none"/></g>
+          <g transform="translate(469 248)"><path d="M0 0v53" stroke="#6c6246" stroke-width="3"/><path d="M-20 16c-4-11 4-21 10-24-3-10 6-20 15-18 11 1 17 12 13 20 13 5 14 17 8 26-8 12-37 11-46-4" fill="#d9bf7c"/></g>
+          <g transform="translate(310 289) rotate(-9)"><ellipse cx="8" cy="24" rx="40" ry="8" fill="#596d58" opacity=".17"/><path d="M-31 16v-22q0-8 9-8h33q6 0 11 6l15 16v13h-68z" fill="#c66c46"/><path d="M-18-9H8v17h-26z" fill="#e1eddf"/><path d="m13-9 6 1L32 8H13z" fill="#c8dfd9"/><path d="M-31 13h68v8h-68z" fill="#e5a36c"/><path d="M-27-17h38" stroke="#664d3e" stroke-width="3" stroke-linecap="round"/><rect x="-18" y="-25" width="20" height="8" rx="2" fill="#d4b77f"/><circle cx="-16" cy="21" r="7" fill="#344d4b"/><circle cx="24" cy="21" r="7" fill="#344d4b"/><circle cx="-16" cy="21" r="3" fill="#e5d7b9"/><circle cx="24" cy="21" r="3" fill="#e5d7b9"/></g>
+          <g fill="#e7cd8e"><ellipse cx="47" cy="384" rx="10" ry="3" transform="rotate(-12 47 384)"/><ellipse cx="37" cy="396" rx="5" ry="2"/><ellipse cx="248" cy="388" rx="10" ry="3"/><ellipse cx="267" cy="376" rx="6" ry="2"/><ellipse cx="505" cy="295" rx="9" ry="3"/></g>
+          <g fill="none" stroke="#5c7e83" stroke-width="1.4" stroke-linecap="round"><path d="M165 85q6-5 12 0 6-5 12 0M179 70q4-4 8 0 4-4 8 0"/></g>
+        </g>
+      </svg>
+      <figcaption>把假期，留给风景。</figcaption>
+      <svg class="postcard-mark" viewBox="0 0 70 35" fill="none" aria-hidden="true"><circle cx="18" cy="17" r="13" stroke="currentColor"/><path d="M9 17h18M18 8v18M36 10q8 4 16 0t16 0M36 17q8 4 16 0t16 0M36 24q8 4 16 0t16 0" stroke="currentColor" stroke-width=".8"/></svg>
+    </figure>
+  </div>
+  <ul class="stubs">
+    <li><span class="lab">这一站，去这里</span><span class="val">示例市</span></li>
+    <li><span class="lab">留给自己的假期</span><span class="val">2026-10-10 至 2026-10-11 · 2 天</span></li>
+    <li><span class="lab">一起出发的人</span><span class="val">成人 2</span></li>
+    <li><span class="lab">这趟旅行的预算</span><span class="val">总预算 1500–2000 CNY</span></li>
+  </ul>
+  <div class="route-strip"><div class="route-caption">TRAVEL NOTES<strong>一路慢慢走</strong></div><div class="route" aria-label="行程顺序示意，非地理地图"><svg viewBox="0 0 720 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="从出发市出发，2 天后返程"><path class="rp-ghost" d="M40.0 58.0 C146.7 58.0, 146.7 34.0, 253.3 34.0 C360.0 34.0, 360.0 66.0, 466.7 66.0 C573.3 66.0, 573.3 58.0, 680.0 58.0"/><path class="rp" pathLength="1" d="M40.0 58.0 C146.7 58.0, 146.7 34.0, 253.3 34.0 C360.0 34.0, 360.0 66.0, 466.7 66.0 C573.3 66.0, 573.3 58.0, 680.0 58.0"/><g class="node" style="animation-delay:0.35s"><circle cx="40.0" cy="58.0" r="12"/><text x="40.0" y="58.0">🏠</text><text class="lab" x="40.0" y="75.0">出发市</text></g><g class="node" style="animation-delay:1.05s"><circle cx="253.3" cy="34.0" r="12"/><text x="253.3" y="34.0">D1</text><text class="lab" x="253.3" y="51.0">10/10</text></g><g class="node" style="animation-delay:1.75s"><circle cx="466.7" cy="66.0" r="12"/><text x="466.7" y="66.0">D2</text><text class="lab" x="466.7" y="83.0">10/11</text></g><g class="node end" style="animation-delay:2.05s"><circle cx="680.0" cy="58.0" r="12"/><text x="680.0" y="58.0">⌂</text><text class="lab" x="680.0" y="75.0">返程</text></g></svg></div></div>
+</header>
+
+<div class="notice info" data-reveal><strong>条件式方案。</strong>标「待你预约 / 待订 / 待确认」的事项完成后才能照着走；每一项的截止时间和没做成怎么办都在 <a href="#checklist">出发前清单</a>。<div class="must"><span>⏰ 2026-10-03 20:00 · 在示例博物馆官方小程序预约 10 月 10 日 11:00 前后入场名额（2 人…</span><span>⏰ 2026-10-05 · 订老城区住宿一晚，确认可提前寄存行李、退房后可寄存到 15:00；订好后把地址发…</span></div></div>
+
+<div class="layout">
+  <aside class="side">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="#overview"><span class="n">01</span>旅行总览</a></li>
+      <li><a href="#weather"><span class="n">02</span>出行天气</a></li>
+      <li><a href="#days"><span class="n">03</span>每日行程</a></li>
+      <li><a href="#stay"><span class="n">04</span>住与行</a></li>
+      <li><a href="#checklist"><span class="n">05</span>出发前清单</a></li>
+      <li><a href="#evidence"><span class="n">06</span>资料与提醒</a></li>
+    </ul>
+    <div class="prog-wrap"><div>出发前清单</div><div class="prog"><i data-prog></i></div><div class="prog-txt" data-prog-txt>已完成 0 / 4</div></div>
+  </aside>
+
+  <main class="main">
+
+    <section id="overview" class="card" data-reveal>
+      <div class="section-label">01 / 先挑好方向，再慢慢出发</div>
+      <h2>旅行总览</h2>
+      <div class="quiet-panel">
+<div class="quiet-top"><span class="quiet-eyebrow">为这趟旅行，留一点从容</span><span class="quiet-asof">核查于 未核查</span></div>
+<h3>用片区慢游减少排队和跨城折返（演示）</h3>
+<div class="quiet-risks"><div><small>景点人流</small><strong class="risk-unknown">未知</strong></div><div><small>道路与进出城</small><strong class="risk-unknown">未知</strong></div></div>
+<details class="quiet-more"><summary>展开错峰办法与出发前核对项</summary>
+<div class="quiet-actions">
+<div class="quiet-row"><b>怎么避开</b><ul><li>同片区安排主要活动，减少跨区往返。</li><li>实际国庆出行前须用当年公告和交通信息重新筛选。</li></ul></div>
+<div class="quiet-row"><b>路上留意</b><ul><li>景点入口排队与周边道路通行状况待现场核查。</li></ul></div>
+<div class="quiet-row"><b>出发前复查</b><ul><li>目标年份国庆放假安排、景区特别公告和限流。</li><li>出发前与当天的导航路况、停车或公共交通信息。</li></ul></div>
+</div>
+</details></div>
+<details class="overview-details"><summary>同行、预算与出行偏好</summary>
+<div class="tiles">
+<div class="tile"><span class="lab">出发地</span><span class="val">出发市</span></div>
+<div class="tile"><span class="lab">日期</span><span class="val">2026-10-10 至 2026-10-11（2 天）</span></div>
+<div class="tile"><span class="lab">同行</span><span class="val">成人 2</span></div>
+<div class="tile"><span class="lab">预算口径</span><span class="val">总预算 1500–2000 CNY；含 大交通、住宿、门票、餐饮、市内交通；已付 640 CNY</span></div>
+<div class="tile"><span class="lab">节奏</span><span class="val">早起：8 点前出门可以接受；每日：上午 9 点到晚上 8 点；步行：中等，连续步行不超过 1 小时要能坐下休息</span></div>
+<div class="tile"><span class="lab">人流容忍度</span><span class="val">希望少排队</span></div>
+<div class="tile"><span class="lab">堵车容忍度</span><span class="val">希望少堵车</span></div>
+<div class="tile"><span class="lab">日期调整空间</span><span class="val">未说明</span></div>
+<div class="tile"><span class="lab">避拥挤取舍</span><span class="val">技术演示数据，不代表国庆实时判断</span></div>
+<div class="tile"><span class="lab">必去</span><span class="val">示例博物馆</span></div>
+<div class="tile"><span class="lab">可选兴趣</span><span class="val">园林、夜景</span></div>
+<div class="tile"><span class="lab">特殊需求</span><span class="val">无</span></div>
+<div class="tile"><span class="lab">行李</span><span class="val">各一个背包</span></div>
+<div class="tile"><span class="lab">交通要求</span><span class="val">未说明</span></div>
+<div class="tile"><span class="lab">行动便利要求</span><span class="val">未说明</span></div>
+<div class="tile"><span class="lab">喜欢 / 不去</span><span class="val">人文、美食、拍照 / 剧烈运动、长途大巴</span></div>
+<div class="tile"><span class="lab">方案状态</span><span class="val"><span class="badge b-conditional">条件式方案</span> · 核查于 2026-09-18T15:20:00+08:00</span></div>
+</div></details>
+<h3>这几天，慢慢走</h3><div class="strip">
+<a class="dcard int-moderate" href="#day-01"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><div class="dn">D1</div><div class="dd">10月10日（周六） · 适中</div><div class="dt">抵达 · 博物馆 · 老街夜晚</div><div class="dr">文化区 → 老城区</div><div class="dr small">住 老城区住宿片区</div></a>
+<a class="dcard int-light" href="#day-02"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><div class="dn">D2</div><div class="dd">10月11日（周日） · 轻松</div><div class="dt">园林 · 湖滨 · 返程</div><div class="dr">老城区 → 湖滨区 → 站前区</div><div class="dr small">住 老城区住宿片区</div></a>
+</div>
+<details class="overview-details planning-details"><summary>已确定的安排与规划依据</summary>
+<h3>锁定安排</h3>
+<ul class="lock-list"><li><span class="ico">🔒</span><span>去程高铁 出发市→示例市，已出票<span class="small"> · 10-10 07:30 → 10-10 08:40 · 已确认</span></span></li><li><span class="ico">🔒</span><span>返程高铁 示例市→出发市，已出票<span class="small"> · 10-11 18:30 → 10-11 19:40 · 已确认</span></span></li></ul>
+<h3>规划依据</h3><div class="callouts">
+<div class="callout assume"><h4>采用的假设</h4><ul><li>住宿未订，按老城区片区作为每日基点规划（系统建议，待你确认）</li><li>全程公共交通，不换住宿（系统默认）</li><li>天气按 10 月季节参考处理，出发前 3 天再查预报</li></ul></div>
+<div class="callout trade"><h4>重要取舍</h4><ul><li>博物馆放在第一天 11:00 时段而不是第二天：第二天要赶 18:30 返程，把唯一需要预约的项目放前面，失败还有第二天上午可补。</li><li>第二天不安排跨区第三个景点：返程前要留进站时间，宁可湖边多坐一会。</li></ul></div>
+</div>
+<div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>天</th><th>日期</th><th>主题</th><th>片区</th><th>住宿基点</th><th>强度</th><th>主要提醒</th></tr></thead><tbody>
+<tr><td>D1</td><td>10月10日（周六）</td><td>抵达 · 博物馆 · 老街夜晚</td><td>文化区 → 老城区</td><td>老城区住宿片区</td><td>适中</td><td>机动时间约 1.5 小时，集中在入住后</td></tr>
+<tr><td>D2</td><td>10月11日（周日）</td><td>园林 · 湖滨 · 返程</td><td>老城区 → 湖滨区 → 站前区</td><td>老城区住宿片区</td><td>轻松</td><td>返程前不加新景点</td></tr>
+</tbody></table></div>
+<p class="small" style="margin-top:10px">时间为当地时间。标「估算」的路段时长来自资料估算而非地图工具，已按上界留时；排程时刻是规划结果，不代表交通或营业时间本身有分钟级精度。</p>
+</details>
+    </section>
+
+    <section id="weather" class="card">
+      <div class="section-label">02 / 先看天气，再决定怎么玩</div>
+      <h2>出行天气</h2>
+      <p class="weather-intro">查询时间：尚未核实。行程日期超出可用预报范围，且本次宿主无天气工具。以下为 10 月季节参考，不是预报。</p><div class="weather-grid"><article data-date="2026-10-10" class="weather-day weather-unavailable"><div class="weather-day-top"><b>10月10日（周六）</b><span>等待更新</span></div><div class="weather-location">示例市</div><div class="weather-main"><span class="weather-symbol" aria-hidden="true">—</span><div><strong>尚未取得预报</strong><div class="weather-temp">温度待更新</div></div></div><details class="weather-detail"><summary>预报详情</summary><p>尚未取得该日可核实的预报</p><p>发布时间：来源页面未明确标注</p></details></article><article data-date="2026-10-11" class="weather-day weather-unavailable"><div class="weather-day-top"><b>10月11日（周日）</b><span>等待更新</span></div><div class="weather-location">示例市</div><div class="weather-main"><span class="weather-symbol" aria-hidden="true">—</span><div><strong>尚未取得预报</strong><div class="weather-temp">温度待更新</div></div></div><details class="weather-detail"><summary>预报详情</summary><p>尚未取得该日可核实的预报</p><p>发布时间：来源页面未明确标注</p></details></article></div><div class="weather-pack"><b>带什么、怎么调整</b><ul><li>早晚温差大，带薄外套</li><li>备折叠伞</li><li>园林与湖滨步道以步行为主，穿舒适的鞋</li></ul></div>
+    </section>
+
+    <section id="days" class="card">
+      <div class="section-label">03 / 把每天的好时光，安排得刚刚好</div>
+      <h2>每日行程</h2>
+      <div class="daynav" id="daynav" role="tablist" aria-label="按天切换"></div>
+      <article class="day" id="day-01" data-label="D1 抵达 · 博物馆" data-sub="10月10日（周六）">
+<div class="day-head"><div class="dn">D1</div><h3>抵达 · 博物馆 · 老街夜晚</h3><div class="sub"><span>📅 10月10日（周六）</span><span>🗺 文化区 → 老城区</span><span>🏨 老城区住宿片区</span><span>⚡ 适中</span></div></div>
+
+<div class="day-notes"><span>机动时间约 1.5 小时，集中在入住后</span></div>
+<ol class="tl">
+<li class="ti kind-transport_major vs-verified locked" data-reveal>
+<div class="ti-time"><span class="t1">07:30</span><span>08:40</span><span class="dur">70 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚄</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>高铁 出发市 → 示例市（已出票）</h4><div class="badges"><span class="badge b-locked">🔒 锁定</span><span class="badge b-booking confirmed">已确认预约</span><span class="badge b-verified">已核实</span><span class="badge b-kind">大交通</span></div></div>
+<p class="ti-desc">锁定项。出发市站建议提前 40 分钟到站；到达后从北广场出站口出，直接进地铁。</p>
+<div class="ti-cost">💰 0 CNY（已付）</div>
+<ul class="ti-tips"><li>票面信息以 12306 为准</li></ul>
+<details><summary>依据（1）</summary><ul><li>去返程高铁均已出票（用户票面截图） <span class="badge b-verified">已核实</span></li></ul></details>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">08:40</span><span>09:20</span><span class="dur">40 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚇</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>地铁 → 老城区（寄存行李）</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">按 40 分钟留时。行李可寄存在住处（订好后确认能否提前寄存）。</p>
+<div class="leg-pill"><span>示例市高铁站 → 老城区住宿片区（规划假设，未订）</span><span>地铁</span><span>预计 25–40 分钟，按 <b>40 分钟</b>留时</span><span class="badge b-verified">公开路线资料</span><span>换乘 1 次，步行约 10 分钟</span><span class="small">含出站步行与候车；按 40 分钟留时</span></div>
+<div class="ti-cost">💰 8–12 CNY（两人） · 估算</div>
+</div></li>
+<li class="ti kind-meal vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">09:20</span><span>10:10</span><span class="dur">50 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🍜</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>老街附近早午餐</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-estimate">估算</span><span class="badge b-kind">用餐</span></div></div>
+<p class="ti-desc">住宿片区与老街相邻，步行可达（同片区，未单列路段）。选择标准：本地早点铺，不排长队的。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区示例老街">示例老街 · 入口/站点：东牌坊 · 示例市老城区示例老街</span></div></div>
+<div class="ti-cost">💰 40–80 CNY（两人） · 估算</div>
+<ul class="ti-tips"><li>周六上午老街人不多，晚上再逛主街</li><li>备注：同片区步行</li></ul>
+<details><summary>依据（1）</summary><ul><li>示例老街为开放式街区，无固定开放时间；多数店铺约 10:00–21:00 <span class="badge b-estimate">经验参考</span></li></ul></details>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">10:10</span><span>10:45</span><span class="dur">35 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚇</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>地铁 → 示例博物馆</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">按 35 分钟留时（估算）。</p>
+<div class="leg-pill"><span>老城区住宿片区（规划假设，未订） → 示例博物馆</span><span>地铁</span><span>预计 20–35 分钟，按 <b>35 分钟</b>留时</span><span class="badge b-estimate">估算</span><span>步行约 12 分钟</span><span class="small">线路图估算，未用地图工具；按 35 分钟留时</span></div>
+<div class="ti-cost">💰 8–12 CNY（两人） · 估算</div>
+</div></li>
+<li class="ti kind-visit vs-conditional" data-reveal>
+<div class="ti-time"><span class="t1">11:00</span><span>14:00</span><span class="dur">3 小时</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">📍</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>示例博物馆（必去 · 需预约）</h4><div class="badges"><span class="badge b-booking pending_user">待你预约</span><span class="badge b-conditional">有条件</span><span class="badge b-kind">游览</span></div></div>
+<p class="ti-desc">你的必去项目。放在第一天 11:00 时段：预约失败还能用第二天上午补救。建议先看常设展再看特展，馆内有休息区，2—3 小时够用。11:00 入场，避开开馆高峰。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市文化路 100 号">示例博物馆（本馆） · 入口/站点：南门（预约入口） · 示例市文化路 100 号</span></div><div><span class="k">🕘</span><span>开放 09:00–17:00（最后入场 16:00） 周一闭馆</span></div><div><span class="k">🎫</span><span>场所入场预约：需要 · 官方小程序（名称以官网为准），提前 7 天 20:00 放票 · 实名预约，携带身份证件</span></div></div>
+<div class="ti-cost">💰 0 CNY（免费预约）</div>
+<ul class="ti-tips"><li>10 月 3 日 20:00 放 10 月 10 日名额，务必当天抢</li><li>带身份证件</li><li>备注：条件：预约成功</li></ul>
+<details><summary>依据（3）</summary><ul><li>示例博物馆周二至周日 09:00–17:00 开放，16:00 停止入场，周一闭馆（法定节假日另行公告） <span class="badge b-verified">已核实</span></li><li>2026-10-10（周六）无临时闭馆公告 <span class="badge b-verified">已核实</span></li><li>示例博物馆需实名预约，官方小程序提前 7 天 20:00 放票 <span class="badge b-verified">已核实</span></li></ul></details>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">14:00</span><span>14:35</span><span class="dur">35 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚇</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>地铁 → 老街</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">按 35 分钟留时（估算）。</p>
+<div class="leg-pill"><span>示例博物馆 → 示例老街</span><span>地铁</span><span>预计 20–35 分钟，按 <b>35 分钟</b>留时</span><span class="badge b-estimate">估算</span><span>步行约 10 分钟</span><span class="small">估算；按 35 分钟留时</span></div>
+<div class="ti-cost">💰 8–12 CNY（两人） · 估算</div>
+</div></li>
+<li class="ti kind-checkin vs-unknown" data-reveal>
+<div class="ti-time"><span class="t1">14:35</span><span>16:30</span><span class="dur">115 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🏨</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>入住 · 休息</h4><div class="badges"><span class="badge b-booking unknown">预约情况未知</span><span class="badge b-unknown">未知</span><span class="badge b-kind">入住</span></div></div>
+<p class="ti-desc">住宿未订。订好后请把地址发我，我会更新首末路段。地铁到老街后同片区步行至住处。这段留作午后休息。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区（示例路—示例桥一带）">老城区住宿片区（规划假设，未订） · 示例市老城区（示例路—示例桥一带）</span></div><div><span class="k">🎫</span><span>场所入场预约：是否需要预约未知，待查</span></div></div>
+<div class="ti-cost">💰 350–550 CNY（每晚/间） · 估算</div>
+<ul class="ti-tips"><li>备注：住宿待订</li></ul>
+</div></li>
+<li class="ti kind-visit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">16:30</span><span>19:00</span><span class="dur">2.5 小时</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">📍</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>示例老街 · 傍晚到夜</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-estimate">估算</span><span class="badge b-kind">游览</span></div></div>
+<p class="ti-desc">从住处步行即到（同片区）。老街东牌坊进，沿主街走到河边，天黑后灯笼亮起适合拍照。开放式街区，没有门票；店铺多在 21:00 前打烊。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区示例老街">示例老街 · 入口/站点：东牌坊 · 示例市老城区示例老街</span></div><div><span class="k">🕘</span><span>开放时间未查到（按未知处理）</span></div></div>
+<ul class="ti-tips"><li>主街人多时走一条平行的小巷</li><li>备注：同片区步行</li></ul>
+<details><summary>依据（1）</summary><ul><li>示例老街为开放式街区，无固定开放时间；多数店铺约 10:00–21:00 <span class="badge b-estimate">经验参考</span></li></ul></details>
+</div></li>
+<li class="ti kind-meal vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">19:00</span><span>20:30</span><span class="dur">90 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🍜</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>老街晚餐</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-estimate">估算</span><span class="badge b-kind">用餐</span></div></div>
+<p class="ti-desc">就在老街片区解决。选择标准：本地菜、有座位、不用排队半小时以上；特定餐馆未核实，不指定。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区示例老街">示例老街 · 入口/站点：东牌坊 · 示例市老城区示例老街</span></div></div>
+<div class="ti-cost">💰 120–200 CNY（两人） · 估算</div>
+</div></li>
+</ol>
+<div class="alt" data-reveal><div class="t">备用方案 · 触发：10 月 3 日 20:00 未抢到 10 月 10 日博物馆名额</div><details class="alt-detail"><summary>查看替换安排</summary><div class="chain"><span>替换 地铁 → 示例博物馆、示例博物馆（必去 · 需预约）、地铁 → 老街</span><span>→ 接回 入住 · 休息</span></div><div>第一天 11:00 时段改为老城区内的示例园林（无需预约，现场购票），第二天上午再试博物馆当日余票或放弃。第二天上午原园林时段改为老街慢逛。</div><div class="meta">费用 +80 元门票提前到第一天，总额不变 · 时间 第一天少约 1 小时地铁往返 · 可随时切换 · 已核实</div></details></div>
+</article>
+<article class="day" id="day-02" data-label="D2 园林 · 湖滨 " data-sub="10月11日（周日）">
+<div class="day-head"><div class="dn">D2</div><h3>园林 · 湖滨 · 返程</h3><div class="sub"><span>📅 10月11日（周日）</span><span>🗺 老城区 → 湖滨区 → 站前区</span><span>🏨 老城区住宿片区</span><span>⚡ 轻松</span></div></div>
+
+<div class="day-notes"><span>返程前不加新景点</span></div>
+<ol class="tl">
+<li class="ti kind-checkout vs-unknown" data-reveal>
+<div class="ti-time"><span class="t1">08:00</span><span>08:30</span><span class="dur">30 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🧳</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>早餐 · 退房 · 寄存行李</h4><div class="badges"><span class="badge b-booking unknown">预约情况未知</span><span class="badge b-unknown">未知</span><span class="badge b-kind">退房</span></div></div>
+<p class="ti-desc">退房后把行李寄存在住处前台（订房时确认可寄存到 15:00）。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区（示例路—示例桥一带）">老城区住宿片区（规划假设，未订） · 示例市老城区（示例路—示例桥一带）</span></div><div><span class="k">🎫</span><span>场所入场预约：是否需要预约未知，待查</span></div></div>
+<div class="ti-cost">💰 未知 · 未知</div>
+<ul class="ti-tips"><li>备注：住宿待订</li></ul>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">08:30</span><span>08:45</span><span class="dur">15 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚶</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>步行 → 示例园林</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">同片区步行约 10—15 分钟。</p>
+<div class="leg-pill"><span>老城区住宿片区（规划假设，未订） → 示例园林</span><span>步行</span><span>预计 10–15 分钟，按 <b>15 分钟</b>留时</span><span class="badge b-estimate">估算</span><span>步行约 15 分钟</span><span class="small">同片区步行估算</span></div>
+</div></li>
+<li class="ti kind-visit vs-verified" data-reveal>
+<div class="ti-time"><span class="t1">08:45</span><span>10:45</span><span class="dur">2 小时</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">📍</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>示例园林</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-verified">已核实</span><span class="badge b-kind">游览</span></div></div>
+<p class="ti-desc">早上人少光线好。正门进，顺时针走一圈约 1.5—2 小时。现场购票，40 元/人（旺季）。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市园林路 8 号">示例园林 · 入口/站点：正门 · 示例市园林路 8 号</span></div><div><span class="k">🕘</span><span>开放 07:30–17:30（最后入场 17:00） 旺季 3–11 月</span></div></div>
+<div class="ti-cost">💰 80 CNY（两人）</div>
+<ul class="ti-tips"><li>园内有茶室，可坐 20 分钟</li></ul>
+<details><summary>依据（2）</summary><ul><li>示例园林 07:30–17:30 开放，17:00 停止入园（旺季 3–11 月） <span class="badge b-verified">已核实</span></li><li>示例园林门票 40 元/人（旺季），现场可购 <span class="badge b-verified">已核实</span></li></ul></details>
+</div></li>
+<li class="ti kind-meal vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">10:45</span><span>12:30</span><span class="dur">105 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🍜</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>回老街午餐 · 取行李</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-estimate">估算</span><span class="badge b-kind">用餐</span></div></div>
+<p class="ti-desc">园林与老街同片区，步行回去吃午饭并取行李，避免下午再折返。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市老城区示例老街">示例老街 · 入口/站点：东牌坊 · 示例市老城区示例老街</span></div></div>
+<div class="ti-cost">💰 80–150 CNY（两人） · 估算</div>
+<ul class="ti-tips"><li>备注：同片区步行</li></ul>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">12:30</span><span>13:10</span><span class="dur">40 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚇</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>地铁 → 示例湖滨（带行李）</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">按 40 分钟留时（估算，含一次换乘）。背包随身。</p>
+<div class="leg-pill"><span>示例园林 → 示例湖滨步道</span><span>地铁</span><span>预计 25–40 分钟，按 <b>40 分钟</b>留时</span><span class="badge b-estimate">估算</span><span>换乘 1 次，步行约 15 分钟</span><span class="small">估算；按 40 分钟留时</span></div>
+<div class="ti-cost">💰 8–12 CNY（两人） · 估算</div>
+</div></li>
+<li class="ti kind-visit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">13:10</span><span>16:00</span><span class="dur">约 3 小时</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">📍</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>示例湖滨步道 · 慢走</h4><div class="badges"><span class="badge b-booking not_required">无需预约</span><span class="badge b-estimate">估算</span><span class="badge b-kind">游览</span></div></div>
+<p class="ti-desc">全天开放的免费步道。这段故意留得宽松：走一段、找地方坐一会、喝杯东西，返程前不再安排新景点。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市湖滨路">示例湖滨步道 · 入口/站点：湖滨公园北入口 · 示例市湖滨路</span></div><div><span class="k">🕘</span><span>开放时间未查到（按未知处理）</span></div></div>
+<div class="ti-cost">💰 0–60 CNY（两人（饮品）） · 估算</div>
+<ul class="ti-tips"><li>16:00 前出发去车站，宁早勿晚</li></ul>
+<details><summary>依据（1）</summary><ul><li>示例湖滨步道全天开放，夜间有灯光 <span class="badge b-estimate">经验参考</span></li></ul></details>
+</div></li>
+<li class="ti kind-transit vs-estimate" data-reveal>
+<div class="ti-time"><span class="t1">16:00</span><span>17:30</span><span class="dur">90 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚇</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>地铁 → 高铁站 · 进站</h4><div class="badges"><span class="badge b-estimate">估算</span><span class="badge b-kind">交通</span></div></div>
+<p class="ti-desc">按 45 分钟路程 + 45 分钟进站候车留时。</p>
+<div class="leg-pill"><span>示例湖滨步道 → 示例市高铁站</span><span>地铁</span><span>预计 30–45 分钟，按 <b>45 分钟</b>留时</span><span class="badge b-estimate">估算</span><span>换乘 1 次，步行约 12 分钟</span><span class="small">估算；按 45 分钟留时，另留 40 分钟进站</span></div>
+<div class="ti-cost">💰 8–12 CNY（两人） · 估算</div>
+</div></li>
+<li class="ti kind-buffer vs-verified" data-reveal>
+<div class="ti-time"><span class="t1">17:30</span><span>18:30</span><span class="dur">60 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">⏳</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>候车机动</h4><div class="badges"><span class="badge b-verified">已核实</span><span class="badge b-kind">机动</span></div></div>
+<p class="ti-desc">机动时间，吸收地铁延误与安检排队。</p>
+<div class="ti-meta"><div><span class="k">📍</span><span data-copy="示例市站前路 1 号">示例市高铁站 · 入口/站点：北广场出站口 · 示例市站前路 1 号</span></div></div>
+</div></li>
+<li class="ti kind-transport_major vs-verified locked" data-reveal>
+<div class="ti-time"><span class="t1">18:30</span><span>19:40</span><span class="dur">70 分钟</span></div>
+<div class="ti-node"><span class="ico" aria-hidden="true">🚄</span></div>
+<div class="ti-card">
+<div class="ti-head"><h4>高铁 示例市 → 出发市（已出票）</h4><div class="badges"><span class="badge b-locked">🔒 锁定</span><span class="badge b-booking confirmed">已确认预约</span><span class="badge b-verified">已核实</span><span class="badge b-kind">大交通</span></div></div>
+<p class="ti-desc">锁定项。</p>
+<div class="ti-cost">💰 0 CNY（已付）</div>
+<details><summary>依据（1）</summary><ul><li>去返程高铁均已出票（用户票面截图） <span class="badge b-verified">已核实</span></li></ul></details>
+</div></li>
+</ol>
+<div class="alt" data-reveal><div class="t">备用方案 · 触发：第二天上午降雨</div><details class="alt-detail"><summary>查看替换安排</summary><div class="chain"><span>替换 示例园林</span><span>→ 接回 回老街午餐 · 取行李</span></div><div>园林雨天仍开放且别有意境，小雨照常；大雨则改为老街室内茶馆坐到午餐，园林放弃。</div><div class="meta">费用 -80 元门票 · 时间 无 · 可随时切换 · 估算</div></details></div>
+</article>
+    </section>
+
+    <section id="stay" class="card" data-reveal>
+      <div class="section-label">04 / 住得舒服，路上从容</div>
+      <h2>住宿 · 大交通 · 预算</h2>
+      <h3>住宿</h3><p><strong>全程住老城区，不换住宿。</strong></p>
+<div class="regions">
+<div class="region rec"><h4>⭐ 老城区（推荐）</h4><dl class="row"><dt>优点</dt><dd>老街、园林步行可达；到博物馆一趟地铁</dd><dt>缺点</dt><dd>周末夜里主街略吵，选巷内房源</dd><dt>参考</dt><dd>约 350—550 元/晚（估算，未查实时价）</dd><dt>适合</dt><dd>两天都合适</dd></dl></div>
+<div class="region"><h4>站前区</h4><dl class="row"><dt>优点</dt><dd>离高铁站近，返程省心</dd><dt>缺点</dt><dd>两天都要往返老城区，多花约 1 小时</dd><dt>参考</dt><dd>约 300—450 元/晚（估算）</dd><dt>适合</dt><dd>只在很在意返程时考虑</dd></dl></div>
+</div>
+<h3>往返交通</h3><div class="tickets">
+<article class="ticket">
+<div class="ticket-heading"><span class="ticket-mode">高铁</span><span class="badge b-verified">已订</span></div>
+<div class="ticket-route"><span>出发市</span><span class="arr" aria-hidden="true">→</span><span>示例市</span></div>
+<dl class="ticket-times"><div><dt>出发</dt><dd>10-10 07:30</dd></div><div><dt>到达</dt><dd>10-10 08:40</dd></div></dl>
+<p class="ticket-note">用户已出票</p>
+<div class="ticket-price"><b>费用说明</b><p>已付 160 元/人</p></div></article>
+<article class="ticket">
+<div class="ticket-heading"><span class="ticket-mode">高铁</span><span class="badge b-verified">已订</span></div>
+<div class="ticket-route"><span>示例市</span><span class="arr" aria-hidden="true">→</span><span>出发市</span></div>
+<dl class="ticket-times"><div><dt>出发</dt><dd>10-11 18:30</dd></div><div><dt>到达</dt><dd>10-11 19:40</dd></div></dl>
+<p class="ticket-note">用户已出票</p>
+<div class="ticket-price"><b>费用说明</b><p>已付 160 元/人</p></div></article>
+</div><p class="small transport-hint">待订交通的班次与价格需在预订渠道确认，路线建议不代表有余票。</p>
+<h3>预算</h3>
+<div class="sums">
+<div class="sum"><div class="lab">已付</div><div class="val">640 CNY</div></div>
+<div class="sum hl"><div class="lab">接下来还要准备</div><div class="val">780–1210 CNY</div><div class="sub">另有 1 项未知，未知不是零</div></div>
+<div class="sum"><div class="lab">总旅行成本（含已付）</div><div class="val">1420–1850 CNY</div></div>
+<div class="sum"><div class="lab">预算上限 2000 CNY</div><div class="val" style="font-size:17px">已知费用未超限，含未知费用时尚不能确认</div></div>
+</div>
+<div class="bbar-wrap"><div class="bbar" role="img" aria-label="预算构成：已付 640，方案费用范围上界 1210，上限 2000"><div class="seg paid" style="flex:0 0 32.00%" title="已记录已付 640 CNY">已付</div><div class="seg" style="flex:0 0 27.50%;background:var(--c2)" title="住宿 上界 550 CNY">住宿</div><div class="seg" style="flex:0 0 4.00%;background:var(--c3)" title="市内交通 上界 80 CNY"></div><div class="seg" style="flex:0 0 4.00%;background:var(--c4)" title="门票 上界 80 CNY"></div><div class="seg" style="flex:0 0 25.00%;background:var(--c5)" title="餐饮 上界 500 CNY">餐饮</div></div><div class="limit" style="left:100.00%" data-label="上限 2000"></div><ul class="legend"><li><i style="background:#5f6d7b"></i>已记录已付 640 CNY</li><li><i style="background:var(--c1)"></i>大交通 0</li><li><i style="background:var(--c2)"></i>住宿 350–550</li><li><i style="background:var(--c3)"></i>市内交通 50–80</li><li><i style="background:var(--c4)"></i>门票 80</li><li><i style="background:var(--c5)"></i>餐饮 300–500</li><li><i style="background:#e2dccf"></i>未知：行李寄存/杂项</li></ul></div>
+<div class="table-wrap"><table><thead><tr><th>类别</th><th>已付</th><th>费用范围（低—高）</th><th>状态</th><th>说明</th></tr></thead><tbody>
+<tr><td>大交通</td><td>640</td><td>0</td><td>已知</td><td>两程高铁已付</td></tr>
+<tr><td>住宿</td><td>0</td><td>350–550</td><td>估算</td><td>老城区一晚，未订</td></tr>
+<tr><td>市内交通</td><td>0</td><td>50–80</td><td>估算</td><td>地铁为主</td></tr>
+<tr><td>门票</td><td>0</td><td>80</td><td>已知</td><td>园林 40×2；博物馆免费预约</td></tr>
+<tr><td>餐饮</td><td>0</td><td>300–500</td><td>估算</td><td>两天五餐</td></tr>
+<tr><td>行李寄存/杂项</td><td>0</td><td>未知</td><td>未知</td><td>取决于住处是否免费寄存</td></tr>
+</tbody></table></div>
+<p class="small">总旅行成本 = 已付 640 + 预计未付 780—1210 = 1420—1850 元；另有 1 项未知费用。已知费用未超 2000 元上限，含未知费用时尚不能确认。</p>
+<details class="acc"><summary>全部备用方案对照</summary><div class="table-wrap"><table><thead><tr><th>触发条件</th><th>替换哪段</th><th>从哪接回</th><th>做什么</th><th>费用/时间</th><th>随时切换</th><th>核查</th></tr></thead><tbody>
+<tr><td>10 月 3 日 20:00 未抢到 10 月 10 日博物馆名额</td><td>地铁 → 示例博物馆、示例博物馆（必去 · 需预约）、地铁 → 老街</td><td>入住 · 休息</td><td>第一天 11:00 时段改为老城区内的示例园林（无需预约，现场购票），第二天上午再试博物馆当日余票或放弃。第二天上午原园林时段改为老街慢逛。</td><td>+80 元门票提前到第一天，总额不变 / 第一天少约 1 小时地铁往返</td><td>是</td><td>已核实</td></tr>
+<tr><td>第二天上午降雨</td><td>示例园林</td><td>回老街午餐 · 取行李</td><td>园林雨天仍开放且别有意境，小雨照常；大雨则改为老街室内茶馆坐到午餐，园林放弃。</td><td>-80 元门票 / 无</td><td>是</td><td>估算</td></tr>
+</tbody></table></div></details>
+    </section>
+
+    <section id="checklist" class="card" data-reveal>
+      <div class="section-label">05 / 准备妥当，就可以出发</div>
+      <h2>出发前清单</h2>
+      <div class="prog"><i data-prog style="width:0%"></i></div><div class="prog-txt" data-prog-txt>已完成 0 / 4</div>
+<ul class="checklist">
+<li class="" data-reveal><input type="checkbox" id="chk-museum-booking"><label for="chk-museum-booking"><span class="pri must">必须</span><span class="act">在示例博物馆官方小程序预约 10 月 10 日 11:00 前后入场名额（2 人，实名）</span><span class="check-state">（待办）</span><span class="sub">⏰ 截止 2026-10-03 20:00 · 渠道 官方小程序（名称以官网为准）<br>↪ 没做成：执行 alt-museum-fail：第一天 11:00 时段改园林，第二天上午再试</span></label></li>
+<li class="" data-reveal><input type="checkbox" id="chk-hotel"><label for="chk-hotel"><span class="pri must">必须</span><span class="act">订老城区住宿一晚，确认可提前寄存行李、退房后可寄存到 15:00；订好后把地址发我更新路段</span><span class="check-state">（待办）</span><span class="sub">⏰ 截止 2026-10-05 · 渠道 任意订房渠道<br>↪ 没做成：改为站前区住宿，第二天行程需重排</span></label></li>
+<li class="" data-reveal><input type="checkbox" id="chk-weather"><label for="chk-weather"><span class="pri should">建议</span><span class="act">查 10 月 10—11 日示例市天气预报，雨天按 alt-rain-day2 执行</span><span class="check-state">（待办）</span><span class="sub">⏰ 截止 2026-10-07 · 渠道 任意天气应用<br>↪ 没做成：按季节参考带薄外套与雨具</span></label></li>
+<li class="" data-reveal><input type="checkbox" id="chk-recheck"><label for="chk-recheck"><span class="pri should">建议</span><span class="act">出发前一天再看一眼博物馆公告页是否有临时闭馆</span><span class="check-state">（待办）</span><span class="sub">⏰ 截止 2026-10-09 · 渠道 示例博物馆官网公告<br>↪ 没做成：同 alt-museum-fail</span></label></li>
+</ul>
+<p class="storage-note">勾选只保存在你这台设备的浏览器里，关闭后可能不会保留；文件本身不会被修改。</p>
+    </section>
+
+    <section id="evidence" class="card" data-reveal>
+      <div class="section-label">06 / 需要时，再多了解一点</div>
+      <h2>证据 · 风险 · 版本</h2>
+      <h3>风险</h3><ul class="risks"><li>博物馆名额紧张，放票当天需准时抢</li><li>所有地铁时长为估算（未用地图工具），已按上界留时</li><li>住宿未订，首末路段会随实际位置变化</li></ul>
+<details class="acc"><summary>资料来源与核查记录（需要时再看）</summary>
+<h3>本次可用能力</h3><ul class="caps"><li class="on">联网搜索 · 可用（ok）</li><li class="on">网页读取 · 可用（ok）</li><li class="on">文件写入 · 可用（ok）</li><li class="on">脚本执行 · 可用（python3 可用）</li><li class="off">地图/路线 · 不可用（公开路线资料 + 保守估算）</li><li class="off">天气 · 不可用（季节参考 + 出发前待查）</li><li class="off">生图 · 未知（跳过图片卡）</li><li class="off">TikHub 小红书 · 不可用（用户本次选择不用）（普通联网调研）</li></ul>
+<details class="acc"><summary>事实记录（8）</summary><div class="table-wrap"><table><thead><tr><th>结论</th><th>状态</th><th>适用期</th><th>来源</th><th>抓取</th></tr></thead><tbody>
+<tr><td>示例博物馆周二至周日 09:00–17:00 开放，16:00 停止入场，周一闭馆（法定节假日另行公告）</td><td><span class="badge b-verified">已核实</span></td><td>2026-01-01~2026-12-31</td><td>示例博物馆 参观须知（示例）</td><td>2026-09-18T14:10:00+08:00</td></tr>
+<tr><td>2026-10-10（周六）无临时闭馆公告</td><td><span class="badge b-verified">已核实</span></td><td>2026-10-10~2026-10-10</td><td>示例博物馆 参观须知（示例）</td><td>2026-09-18T14:10:00+08:00</td></tr>
+<tr><td>示例博物馆需实名预约，官方小程序提前 7 天 20:00 放票</td><td><span class="badge b-verified">已核实</span></td><td>未注明</td><td>示例博物馆 参观须知（示例）</td><td>2026-09-18T14:10:00+08:00</td></tr>
+<tr><td>示例园林 07:30–17:30 开放，17:00 停止入园（旺季 3–11 月）</td><td><span class="badge b-verified">已核实</span></td><td>2026-03-01~2026-11-30</td><td>示例园林 开放时间（示例）</td><td>2026-09-18T14:12:00+08:00</td></tr>
+<tr><td>示例园林门票 40 元/人（旺季），现场可购</td><td><span class="badge b-verified">已核实</span></td><td>2026-03-01~2026-11-30</td><td>示例园林 开放时间（示例）</td><td>2026-09-18T14:12:00+08:00</td></tr>
+<tr><td>示例老街为开放式街区，无固定开放时间；多数店铺约 10:00–21:00</td><td><span class="badge b-estimate">经验参考</span></td><td>未注明</td><td>示例市轨道交通线路说明（示例）</td><td>2026-09-18T14:16:00+08:00</td></tr>
+<tr><td>去返程高铁均已出票（用户票面截图）</td><td><span class="badge b-verified">已核实</span></td><td>2026-10-10~2026-10-11</td><td>用户提供的高铁订单截图</td><td>2026-09-18T14:05:00+08:00</td></tr>
+<tr><td>示例湖滨步道全天开放，夜间有灯光</td><td><span class="badge b-estimate">经验参考</span></td><td>未注明</td><td>示例市轨道交通线路说明（示例）</td><td>2026-09-18T14:18:00+08:00</td></tr>
+</tbody></table></div></details>
+<details class="acc"><summary>来源（4）</summary><ul class="small">
+<li><a href="https://example.org/museum/visit" rel="noopener noreferrer" target="_blank">示例博物馆 参观须知（示例）</a> · 示例博物馆 · 发布 2026-08-01 · official</li>
+<li><a href="https://example.org/garden/hours" rel="noopener noreferrer" target="_blank">示例园林 开放时间（示例）</a> · 示例园林管理处 · 发布 2026-03-01 · official</li>
+<li><a href="https://example.org/metro/lines" rel="noopener noreferrer" target="_blank">示例市轨道交通线路说明（示例）</a> · 示例市地铁 · web</li>
+<li>用户提供的高铁订单截图（用户提供/无链接） · user_material</li>
+</ul></details>
+<p class="small">本文件为 qitianjia-guoqing-quiet-travel 的示例数据，所有地点、来源与规则均为虚构，仅用于演示数据契约与渲染。</p>
+<details class="acc"><summary>关键决策（2）</summary><ul class="small"><li>博物馆放第一天还是第二天：选择「第一天 11:00 时段」（选项：第一天 11:00 时段（预约失败可第二天补） / 第二天上午（返程前时间紧）；2026-09-18T14:40:00+08:00）</li><li>是否启用 TikHub 小红书调研：选择「这次先不用」（选项：使用已有令牌 / 需要注册指导 / 这次先不用；2026-09-18T14:05:00+08:00）</li></ul></details>
+<h3>版本</h3><ul class="versions"><li><b>v1</b> · 2026-09-18T15:00:00+08:00 · 首版：两日行程，条件式方案（待预约、待订房）</li></ul>
+<p class="small">编号 2026-10-10-example-2d · 版本 v1 · 生成于 2026-09-18T15:00:00+08:00 · 核查于 2026-09-18T15:20:00+08:00 · 内容指纹 4bb800b18516 · 渲染器 5.1.0</p>
+</details>
+    </section>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="attr">由七天假国庆小众旅行规划 Skill 生成</div>
+  <div>2026-10-10-example-2d · 版本 v1 · 生成于 2026-09-18T15:00:00+08:00 · 内容指纹 4bb800b18516</div>
+  <div class="small">本页为离线单文件，打开后不会自动访问任何网络接口；外部链接仅在你点击时打开。</div>
+</footer>
+
+</div>
+
+<script type="application/json" id="qitianjia-trip-snapshot">{"trip_id": "2026-10-10-example-2d", "plan_version": 1, "content_hash": "4bb800b18516a54f608083d3e0d0fc7ed3975ad92ef57ad4d0d1c20beb9a7289", "generated_at": "2026-09-18T15:00:00+08:00", "trip": {"schema_version": "1.0", "trip_id": "2026-10-10-example-2d", "plan_version": 1, "status": "conditional", "user_confirmed": false, "research_mode": "standard", "generated_at": "2026-09-18T15:00:00+08:00", "checked_at": "2026-09-18T15:20:00+08:00", "request": {"origin": {"name": "出发市", "region": null}, "dates": {"start": "2026-10-10", "end": "2026-10-11", "flexible": false, "nights": 1, "return_by": "2026-10-11T21:00:00+08:00"}, "timezone": "Asia/Shanghai", "party": {"adults": 2, "children_ages": [], "seniors": 0, "mobility_notes": null}, "budget": {"mode": "total", "currency": "CNY", "amount_min": 1500, "amount_max": 2000, "includes": ["大交通", "住宿", "门票", "餐饮", "市内交通"], "paid_amount": 640, "flexibility": "可上浮 10%"}, "pace": {"early_start": "8 点前出门可以接受", "daily_hours": "上午 9 点到晚上 8 点", "walking": "中等，连续步行不超过 1 小时要能坐下休息", "rest_needs": null}, "interests": {"like": ["人文", "美食", "拍照"], "must": [{"label": "示例博物馆", "place_id": "place-museum"}], "optional": ["园林", "夜景"], "avoid": ["剧烈运动", "长途大巴"]}, "fixed_commitments": [{"id": "fc-rail-out", "kind": "transport", "description": "去程高铁 出发市→示例市，已出票", "start": "2026-10-10T07:30:00+08:00", "end": "2026-10-10T08:40:00+08:00", "status": "confirmed", "place_id": "place-station"}, {"id": "fc-rail-back", "kind": "transport", "description": "返程高铁 示例市→出发市，已出票", "start": "2026-10-11T18:30:00+08:00", "end": "2026-10-11T19:40:00+08:00", "status": "confirmed", "place_id": "place-station"}], "transport": {"mode": "public", "luggage": "各一个背包", "notes": null}, "special_needs": [], "user_materials": [{"id": "um-01", "type": "screenshot", "note": "高铁订单截图，票面信息可读", "readable": true}], "field_status": {"origin": "user_stated", "dates": "user_stated", "party": "user_stated", "budget": "user_stated", "pace": "user_stated", "interests": "user_stated", "fixed_commitments": "extracted_pending", "transport": "user_stated", "lodging_no_change": "default_suggested"}, "quiet_travel": {"crowd_tolerance": "希望少排队", "traffic_tolerance": "希望少堵车", "date_flexibility": null, "tradeoff_notes": "技术演示数据，不代表国庆实时判断"}}, "capabilities": [{"capability": "web_search", "availability": "available", "permission": "granted", "tool_id": "WebSearch", "verified_at": "2026-09-18T14:00:00+08:00", "test_result": "ok", "fallback": "—"}, {"capability": "web_fetch", "availability": "available", "permission": "granted", "tool_id": "WebFetch", "verified_at": "2026-09-18T14:00:00+08:00", "test_result": "ok", "fallback": "—"}, {"capability": "file_write", "availability": "available", "permission": "granted", "tool_id": "Write", "verified_at": "2026-09-18T14:00:00+08:00", "test_result": "ok", "fallback": "—"}, {"capability": "script_exec", "availability": "available", "permission": "granted", "tool_id": "Bash", "verified_at": "2026-09-18T14:00:00+08:00", "test_result": "python3 可用", "fallback": "模板路径"}, {"capability": "map_route", "availability": "unavailable", "permission": "not_required", "tool_id": null, "verified_at": null, "test_result": null, "fallback": "公开路线资料 + 保守估算"}, {"capability": "weather", "availability": "unavailable", "permission": "not_required", "tool_id": null, "verified_at": null, "test_result": null, "fallback": "季节参考 + 出发前待查"}, {"capability": "image_gen", "availability": "unknown", "permission": "unknown", "tool_id": null, "verified_at": null, "test_result": null, "fallback": "跳过图片卡"}, {"capability": "tikhub", "availability": "unavailable", "permission": "denied", "tool_id": null, "verified_at": null, "test_result": "用户本次选择不用", "fallback": "普通联网调研"}], "sources": [{"source_id": "src-museum-official", "url": "https://example.org/museum/visit", "title": "示例博物馆 参观须知（示例）", "publisher": "示例博物馆", "published_at": "2026-08-01", "retrieved_at": "2026-09-18T14:10:00+08:00", "source_type": "official", "note": "示例数据，非真实来源"}, {"source_id": "src-garden-official", "url": "https://example.org/garden/hours", "title": "示例园林 开放时间（示例）", "publisher": "示例园林管理处", "published_at": "2026-03-01", "retrieved_at": "2026-09-18T14:12:00+08:00", "source_type": "official", "note": "示例数据，非真实来源"}, {"source_id": "src-metro", "url": "https://example.org/metro/lines", "title": "示例市轨道交通线路说明（示例）", "publisher": "示例市地铁", "published_at": null, "retrieved_at": "2026-09-18T14:15:00+08:00", "source_type": "web", "note": "示例数据"}, {"source_id": "src-user-rail", "url": null, "title": "用户提供的高铁订单截图", "publisher": null, "published_at": null, "retrieved_at": "2026-09-18T14:05:00+08:00", "source_type": "user_material", "note": "票面显示两程均已出票"}], "facts": [{"fact_id": "fact-museum-opening", "subject_id": "place-museum", "claim": "示例博物馆周二至周日 09:00–17:00 开放，16:00 停止入场，周一闭馆（法定节假日另行公告）", "valid_for": {"from": "2026-01-01", "to": "2026-12-31"}, "status": "verified", "source_ids": ["src-museum-official"], "excerpt": "开放时间 9:00-17:00（16:00 停止入馆），周一闭馆。", "published_at": "2026-08-01", "retrieved_at": "2026-09-18T14:10:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-museum-target-date", "subject_id": "place-museum", "claim": "2026-10-10（周六）无临时闭馆公告", "valid_for": {"from": "2026-10-10", "to": "2026-10-10"}, "status": "verified", "source_ids": ["src-museum-official"], "excerpt": "公告页截至抓取时无 10 月临时闭馆通知。", "published_at": null, "retrieved_at": "2026-09-18T14:10:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-museum-booking", "subject_id": "place-museum", "claim": "示例博物馆需实名预约，官方小程序提前 7 天 20:00 放票", "valid_for": null, "status": "verified", "source_ids": ["src-museum-official"], "excerpt": "参观需通过官方小程序实名预约，每日 20:00 放出 7 日后名额。", "published_at": "2026-08-01", "retrieved_at": "2026-09-18T14:10:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-garden-opening", "subject_id": "place-garden", "claim": "示例园林 07:30–17:30 开放，17:00 停止入园（旺季 3–11 月）", "valid_for": {"from": "2026-03-01", "to": "2026-11-30"}, "status": "verified", "source_ids": ["src-garden-official"], "excerpt": "旺季 7:30-17:30，17:00 停止售检票。", "published_at": "2026-03-01", "retrieved_at": "2026-09-18T14:12:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-garden-ticket", "subject_id": "place-garden", "claim": "示例园林门票 40 元/人（旺季），现场可购", "valid_for": {"from": "2026-03-01", "to": "2026-11-30"}, "status": "verified", "source_ids": ["src-garden-official"], "excerpt": "旺季票价 40 元。", "published_at": "2026-03-01", "retrieved_at": "2026-09-18T14:12:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-oldstreet-open", "subject_id": "place-oldstreet", "claim": "示例老街为开放式街区，无固定开放时间；多数店铺约 10:00–21:00", "valid_for": null, "status": "experience", "source_ids": ["src-metro"], "excerpt": "游记与街区介绍均提到店铺多在晚上 9 点前后打烊。", "published_at": null, "retrieved_at": "2026-09-18T14:16:00+08:00", "conflicts": [], "method": "web"}, {"fact_id": "fact-rail-tickets", "subject_id": "item-rail-out", "claim": "去返程高铁均已出票（用户票面截图）", "valid_for": {"from": "2026-10-10", "to": "2026-10-11"}, "status": "verified", "source_ids": ["src-user-rail"], "excerpt": "订单状态：已出票。", "published_at": null, "retrieved_at": "2026-09-18T14:05:00+08:00", "conflicts": [], "method": "user"}, {"fact_id": "fact-lake-night", "subject_id": "place-lake", "claim": "示例湖滨步道全天开放，夜间有灯光", "valid_for": null, "status": "experience", "source_ids": ["src-metro"], "excerpt": "多篇游记提到夜景灯光约 19:00 亮起。", "published_at": null, "retrieved_at": "2026-09-18T14:18:00+08:00", "conflicts": [], "method": "web"}], "places": [{"place_id": "place-station", "name": "示例市高铁站", "city": "示例市", "branch": null, "entrance": "北广场出站口", "address": "示例市站前路 1 号", "region": "站前区", "duration_min": null, "duration_max": null, "opening_windows": [], "booking": {"required": false, "channel": null, "note": null}, "coords": null, "nav_link": null, "fact_ids": []}, {"place_id": "place-hotel-area", "name": "老城区住宿片区（规划假设，未订）", "city": "示例市", "branch": null, "entrance": null, "address": "示例市老城区（示例路—示例桥一带）", "region": "老城区", "duration_min": null, "duration_max": null, "opening_windows": [], "booking": {"required": null, "channel": null, "note": "住宿未订，此处为区域代表点"}, "coords": null, "nav_link": null, "fact_ids": []}, {"place_id": "place-museum", "name": "示例博物馆", "city": "示例市", "branch": "本馆", "entrance": "南门（预约入口）", "address": "示例市文化路 100 号", "region": "文化区", "duration_min": 120, "duration_max": 180, "opening_windows": [{"days": [2, 3, 4, 5, 6, 7], "dates": null, "open": "09:00", "close": "17:00", "last_entry": "16:00", "note": "周一闭馆"}], "booking": {"required": true, "channel": "官方小程序（名称以官网为准），提前 7 天 20:00 放票", "note": "实名预约，携带身份证件"}, "coords": null, "nav_link": null, "fact_ids": ["fact-museum-opening", "fact-museum-target-date", "fact-museum-booking"]}, {"place_id": "place-oldstreet", "name": "示例老街", "city": "示例市", "branch": null, "entrance": "东牌坊", "address": "示例市老城区示例老街", "region": "老城区", "duration_min": 90, "duration_max": 150, "opening_windows": [], "booking": {"required": false, "channel": null, "note": null}, "coords": null, "nav_link": null, "fact_ids": ["fact-oldstreet-open"]}, {"place_id": "place-garden", "name": "示例园林", "city": "示例市", "branch": null, "entrance": "正门", "address": "示例市园林路 8 号", "region": "老城区", "duration_min": 90, "duration_max": 120, "opening_windows": [{"days": [1, 2, 3, 4, 5, 6, 7], "dates": null, "open": "07:30", "close": "17:30", "last_entry": "17:00", "note": "旺季 3–11 月"}], "booking": {"required": false, "channel": "现场购票", "note": null}, "coords": null, "nav_link": null, "fact_ids": ["fact-garden-opening", "fact-garden-ticket"]}, {"place_id": "place-lake", "name": "示例湖滨步道", "city": "示例市", "branch": null, "entrance": "湖滨公园北入口", "address": "示例市湖滨路", "region": "湖滨区", "duration_min": 60, "duration_max": 90, "opening_windows": [], "booking": {"required": false, "channel": null, "note": null}, "coords": null, "nav_link": null, "fact_ids": ["fact-lake-night"]}], "legs": [{"leg_id": "leg-station-hotel", "from_id": "place-station", "to_id": "place-hotel-area", "mode": "地铁", "depart_window": "09:00 前后", "time_min": 25, "time_max": 40, "transfers": 1, "walking_min": 10, "evidence_level": "public_route", "source_ids": ["src-metro"], "retrieved_at": "2026-09-18T14:15:00+08:00", "note": "含出站步行与候车；按 40 分钟留时"}, {"leg_id": "leg-hotel-museum", "from_id": "place-hotel-area", "to_id": "place-museum", "mode": "地铁", "depart_window": "10:00 前后", "time_min": 20, "time_max": 35, "transfers": 0, "walking_min": 12, "evidence_level": "estimate", "source_ids": ["src-metro"], "retrieved_at": "2026-09-18T14:15:00+08:00", "note": "线路图估算，未用地图工具；按 35 分钟留时"}, {"leg_id": "leg-museum-oldstreet", "from_id": "place-museum", "to_id": "place-oldstreet", "mode": "地铁", "depart_window": "14:00 前后", "time_min": 20, "time_max": 35, "transfers": 0, "walking_min": 10, "evidence_level": "estimate", "source_ids": ["src-metro"], "retrieved_at": "2026-09-18T14:15:00+08:00", "note": "估算；按 35 分钟留时"}, {"leg_id": "leg-hotel-garden", "from_id": "place-hotel-area", "to_id": "place-garden", "mode": "步行", "depart_window": "08:30 前后", "time_min": 10, "time_max": 15, "transfers": 0, "walking_min": 15, "evidence_level": "estimate", "source_ids": [], "retrieved_at": "2026-09-18T14:20:00+08:00", "note": "同片区步行估算"}, {"leg_id": "leg-garden-lake", "from_id": "place-garden", "to_id": "place-lake", "mode": "地铁", "depart_window": "12:30 前后", "time_min": 25, "time_max": 40, "transfers": 1, "walking_min": 15, "evidence_level": "estimate", "source_ids": ["src-metro"], "retrieved_at": "2026-09-18T14:20:00+08:00", "note": "估算；按 40 分钟留时"}, {"leg_id": "leg-lake-station", "from_id": "place-lake", "to_id": "place-station", "mode": "地铁", "depart_window": "16:00 前后", "time_min": 30, "time_max": 45, "transfers": 1, "walking_min": 12, "evidence_level": "estimate", "source_ids": ["src-metro"], "retrieved_at": "2026-09-18T14:20:00+08:00", "note": "估算；按 45 分钟留时，另留 40 分钟进站"}], "itinerary": {"summary": {"title": "示例市两日人文轻松游（示例数据）", "destination": "示例市", "tagline": "一座博物馆、一条老街、一处园林、一片湖。"}, "assumptions": ["住宿未订，按老城区片区作为每日基点规划（系统建议，待你确认）", "全程公共交通，不换住宿（系统默认）", "天气按 10 月季节参考处理，出发前 3 天再查预报"], "tradeoffs": ["博物馆放在第一天 11:00 时段而不是第二天：第二天要赶 18:30 返程，把唯一需要预约的项目放前面，失败还有第二天上午可补。", "第二天不安排跨区第三个景点：返程前要留进站时间，宁可湖边多坐一会。"], "unmet": [], "days": [{"day_id": "day-01", "date": "2026-10-10", "weekday_check": true, "theme": "抵达 · 博物馆 · 老街夜晚", "region": "文化区 → 老城区", "lodging_base": "老城区住宿片区", "intensity": "moderate", "items": [{"item_id": "item-rail-out", "kind": "transport_major", "place_id": "place-station", "title": "高铁 出发市 → 示例市（已出票）", "planned_start": "2026-10-10T07:30:00+08:00", "planned_end": "2026-10-10T08:40:00+08:00", "timezone": "Asia/Shanghai", "locked": true, "booking_status": "confirmed", "fact_ids": ["fact-rail-tickets"], "incoming_leg_id": null, "alternative_id": null, "verification_status": "verified", "description": "锁定项。出发市站建议提前 40 分钟到站；到达后从北广场出站口出，直接进地铁。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": "已付"}, "tips": ["票面信息以 12306 为准"], "notes": null}, {"item_id": "item-d1-transit-1", "kind": "transit", "place_id": null, "title": "地铁 → 老城区（寄存行李）", "planned_start": "2026-10-10T08:40:00+08:00", "planned_end": "2026-10-10T09:20:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-station-hotel", "alternative_id": null, "verification_status": "estimate", "description": "按 40 分钟留时。行李可寄存在住处（订好后确认能否提前寄存）。", "cost": {"currency": "CNY", "min": 8, "max": 12, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}, {"item_id": "item-d1-meal-1", "kind": "meal", "place_id": "place-oldstreet", "title": "老街附近早午餐", "planned_start": "2026-10-10T09:20:00+08:00", "planned_end": "2026-10-10T10:10:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": ["fact-oldstreet-open"], "incoming_leg_id": null, "alternative_id": null, "verification_status": "estimate", "description": "住宿片区与老街相邻，步行可达（同片区，未单列路段）。选择标准：本地早点铺，不排长队的。", "cost": {"currency": "CNY", "min": 40, "max": 80, "status": "estimate", "unit": "两人"}, "tips": ["周六上午老街人不多，晚上再逛主街"], "notes": "同片区步行"}, {"item_id": "item-d1-transit-2", "kind": "transit", "place_id": null, "title": "地铁 → 示例博物馆", "planned_start": "2026-10-10T10:10:00+08:00", "planned_end": "2026-10-10T10:45:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-hotel-museum", "alternative_id": null, "verification_status": "estimate", "description": "按 35 分钟留时（估算）。", "cost": {"currency": "CNY", "min": 8, "max": 12, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}, {"item_id": "item-d1-museum", "kind": "visit", "place_id": "place-museum", "title": "示例博物馆（必去 · 需预约）", "planned_start": "2026-10-10T11:00:00+08:00", "planned_end": "2026-10-10T14:00:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "pending_user", "fact_ids": ["fact-museum-opening", "fact-museum-target-date", "fact-museum-booking"], "incoming_leg_id": "leg-hotel-museum", "alternative_id": "alt-museum-fail", "verification_status": "conditional", "description": "你的必去项目。放在第一天 11:00 时段：预约失败还能用第二天上午补救。建议先看常设展再看特展，馆内有休息区，2—3 小时够用。11:00 入场，避开开馆高峰。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": "免费预约"}, "tips": ["10 月 3 日 20:00 放 10 月 10 日名额，务必当天抢", "带身份证件"], "notes": "条件：预约成功"}, {"item_id": "item-d1-transit-3", "kind": "transit", "place_id": null, "title": "地铁 → 老街", "planned_start": "2026-10-10T14:00:00+08:00", "planned_end": "2026-10-10T14:35:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-museum-oldstreet", "alternative_id": null, "verification_status": "estimate", "description": "按 35 分钟留时（估算）。", "cost": {"currency": "CNY", "min": 8, "max": 12, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}, {"item_id": "item-d1-checkin", "kind": "checkin", "place_id": "place-hotel-area", "title": "入住 · 休息", "planned_start": "2026-10-10T14:35:00+08:00", "planned_end": "2026-10-10T16:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "unknown", "fact_ids": [], "incoming_leg_id": null, "alternative_id": null, "verification_status": "unknown", "description": "住宿未订。订好后请把地址发我，我会更新首末路段。地铁到老街后同片区步行至住处。这段留作午后休息。", "cost": {"currency": "CNY", "min": 350, "max": 550, "status": "estimate", "unit": "每晚/间"}, "tips": [], "notes": "住宿待订"}, {"item_id": "item-d1-oldstreet", "kind": "visit", "place_id": "place-oldstreet", "title": "示例老街 · 傍晚到夜", "planned_start": "2026-10-10T16:30:00+08:00", "planned_end": "2026-10-10T19:00:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": ["fact-oldstreet-open"], "incoming_leg_id": null, "alternative_id": null, "verification_status": "estimate", "description": "从住处步行即到（同片区）。老街东牌坊进，沿主街走到河边，天黑后灯笼亮起适合拍照。开放式街区，没有门票；店铺多在 21:00 前打烊。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": null}, "tips": ["主街人多时走一条平行的小巷"], "notes": "同片区步行"}, {"item_id": "item-d1-dinner", "kind": "meal", "place_id": "place-oldstreet", "title": "老街晚餐", "planned_start": "2026-10-10T19:00:00+08:00", "planned_end": "2026-10-10T20:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": null, "alternative_id": null, "verification_status": "estimate", "description": "就在老街片区解决。选择标准：本地菜、有座位、不用排队半小时以上；特定餐馆未核实，不指定。", "cost": {"currency": "CNY", "min": 120, "max": 200, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}], "alternative_ids": ["alt-museum-fail"], "notes": ["机动时间约 1.5 小时，集中在入住后"]}, {"day_id": "day-02", "date": "2026-10-11", "weekday_check": true, "theme": "园林 · 湖滨 · 返程", "region": "老城区 → 湖滨区 → 站前区", "lodging_base": "老城区住宿片区", "intensity": "light", "items": [{"item_id": "item-d2-checkout", "kind": "checkout", "place_id": "place-hotel-area", "title": "早餐 · 退房 · 寄存行李", "planned_start": "2026-10-11T08:00:00+08:00", "planned_end": "2026-10-11T08:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "unknown", "fact_ids": [], "incoming_leg_id": null, "alternative_id": null, "verification_status": "unknown", "description": "退房后把行李寄存在住处前台（订房时确认可寄存到 15:00）。", "cost": {"currency": "CNY", "min": null, "max": null, "status": "unknown", "unit": null}, "tips": [], "notes": "住宿待订"}, {"item_id": "item-d2-transit-1", "kind": "transit", "place_id": null, "title": "步行 → 示例园林", "planned_start": "2026-10-11T08:30:00+08:00", "planned_end": "2026-10-11T08:45:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-hotel-garden", "alternative_id": null, "verification_status": "estimate", "description": "同片区步行约 10—15 分钟。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": null}, "tips": [], "notes": null}, {"item_id": "item-d2-garden", "kind": "visit", "place_id": "place-garden", "title": "示例园林", "planned_start": "2026-10-11T08:45:00+08:00", "planned_end": "2026-10-11T10:45:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": ["fact-garden-opening", "fact-garden-ticket"], "incoming_leg_id": "leg-hotel-garden", "alternative_id": "alt-rain-day2", "verification_status": "verified", "description": "早上人少光线好。正门进，顺时针走一圈约 1.5—2 小时。现场购票，40 元/人（旺季）。", "cost": {"currency": "CNY", "min": 80, "max": 80, "status": "known", "unit": "两人"}, "tips": ["园内有茶室，可坐 20 分钟"], "notes": null}, {"item_id": "item-d2-lunch", "kind": "meal", "place_id": "place-oldstreet", "title": "回老街午餐 · 取行李", "planned_start": "2026-10-11T10:45:00+08:00", "planned_end": "2026-10-11T12:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": null, "alternative_id": null, "verification_status": "estimate", "description": "园林与老街同片区，步行回去吃午饭并取行李，避免下午再折返。", "cost": {"currency": "CNY", "min": 80, "max": 150, "status": "estimate", "unit": "两人"}, "tips": [], "notes": "同片区步行"}, {"item_id": "item-d2-transit-2", "kind": "transit", "place_id": null, "title": "地铁 → 示例湖滨（带行李）", "planned_start": "2026-10-11T12:30:00+08:00", "planned_end": "2026-10-11T13:10:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-garden-lake", "alternative_id": null, "verification_status": "estimate", "description": "按 40 分钟留时（估算，含一次换乘）。背包随身。", "cost": {"currency": "CNY", "min": 8, "max": 12, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}, {"item_id": "item-d2-lake", "kind": "visit", "place_id": "place-lake", "title": "示例湖滨步道 · 慢走", "planned_start": "2026-10-11T13:10:00+08:00", "planned_end": "2026-10-11T16:00:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": ["fact-lake-night"], "incoming_leg_id": "leg-garden-lake", "alternative_id": null, "verification_status": "estimate", "description": "全天开放的免费步道。这段故意留得宽松：走一段、找地方坐一会、喝杯东西，返程前不再安排新景点。", "cost": {"currency": "CNY", "min": 0, "max": 60, "status": "estimate", "unit": "两人（饮品）"}, "tips": ["16:00 前出发去车站，宁早勿晚"], "notes": null}, {"item_id": "item-d2-transit-3", "kind": "transit", "place_id": null, "title": "地铁 → 高铁站 · 进站", "planned_start": "2026-10-11T16:00:00+08:00", "planned_end": "2026-10-11T17:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": "leg-lake-station", "alternative_id": null, "verification_status": "estimate", "description": "按 45 分钟路程 + 45 分钟进站候车留时。", "cost": {"currency": "CNY", "min": 8, "max": 12, "status": "estimate", "unit": "两人"}, "tips": [], "notes": null}, {"item_id": "item-d2-buffer", "kind": "buffer", "place_id": "place-station", "title": "候车机动", "planned_start": "2026-10-11T17:30:00+08:00", "planned_end": "2026-10-11T18:30:00+08:00", "timezone": "Asia/Shanghai", "locked": false, "booking_status": "not_required", "fact_ids": [], "incoming_leg_id": null, "alternative_id": null, "verification_status": "verified", "description": "机动时间，吸收地铁延误与安检排队。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": null}, "tips": [], "notes": null}, {"item_id": "item-rail-back", "kind": "transport_major", "place_id": "place-station", "title": "高铁 示例市 → 出发市（已出票）", "planned_start": "2026-10-11T18:30:00+08:00", "planned_end": "2026-10-11T19:40:00+08:00", "timezone": "Asia/Shanghai", "locked": true, "booking_status": "confirmed", "fact_ids": ["fact-rail-tickets"], "incoming_leg_id": null, "alternative_id": null, "verification_status": "verified", "description": "锁定项。", "cost": {"currency": "CNY", "min": 0, "max": 0, "status": "known", "unit": "已付"}, "tips": [], "notes": null}], "alternative_ids": ["alt-rain-day2"], "notes": ["返程前不加新景点"]}], "lodging": {"strategy": "全程住老城区，不换住宿。", "regions": [{"name": "老城区（推荐）", "pros": "老街、园林步行可达；到博物馆一趟地铁", "cons": "周末夜里主街略吵，选巷内房源", "budget_ref": "约 350—550 元/晚（估算，未查实时价）", "suits_days": "两天都合适"}, {"name": "站前区", "pros": "离高铁站近，返程省心", "cons": "两天都要往返老城区，多花约 1 小时", "budget_ref": "约 300—450 元/晚（估算）", "suits_days": "只在很在意返程时考虑"}], "change_lodging": false, "booked": null}, "transport_major": [{"id": "tm-out", "kind": "高铁", "from": "出发市", "to": "示例市", "depart": "2026-10-10T07:30:00+08:00", "arrive": "2026-10-10T08:40:00+08:00", "status": "booked", "note": "用户已出票", "price_ref": "已付 160 元/人"}, {"id": "tm-back", "kind": "高铁", "from": "示例市", "to": "出发市", "depart": "2026-10-11T18:30:00+08:00", "arrive": "2026-10-11T19:40:00+08:00", "status": "booked", "note": "用户已出票", "price_ref": "已付 160 元/人"}], "budget": {"currency": "CNY", "hard_limit": 2000, "categories": [{"name": "大交通", "min": 0, "max": 0, "paid": 640, "status": "known", "note": "两程高铁已付"}, {"name": "住宿", "min": 350, "max": 550, "paid": 0, "status": "estimate", "note": "老城区一晚，未订"}, {"name": "市内交通", "min": 50, "max": 80, "paid": 0, "status": "estimate", "note": "地铁为主"}, {"name": "门票", "min": 80, "max": 80, "paid": 0, "status": "known", "note": "园林 40×2；博物馆免费预约"}, {"name": "餐饮", "min": 300, "max": 500, "paid": 0, "status": "estimate", "note": "两天五餐"}, {"name": "行李寄存/杂项", "min": null, "max": null, "paid": 0, "status": "unknown", "note": "取决于住处是否免费寄存"}], "note": "总旅行成本 = 已付 640 + 预计未付 780—1210 = 1420—1850 元；另有 1 项未知费用。已知费用未超 2000 元上限，含未知费用时尚不能确认。"}, "alternatives": [{"alt_id": "alt-museum-fail", "trigger": "10 月 3 日 20:00 未抢到 10 月 10 日博物馆名额", "replaces_item_ids": ["item-d1-transit-2", "item-d1-museum", "item-d1-transit-3"], "rejoin_at_item_id": "item-d1-checkin", "description": "第一天 11:00 时段改为老城区内的示例园林（无需预约，现场购票），第二天上午再试博物馆当日余票或放弃。第二天上午原园林时段改为老街慢逛。", "place_id": "place-garden", "requires_booking": false, "instant": true, "cost_delta": "+80 元门票提前到第一天，总额不变", "time_delta": "第一天少约 1 小时地铁往返", "verification_status": "verified"}, {"alt_id": "alt-rain-day2", "trigger": "第二天上午降雨", "replaces_item_ids": ["item-d2-garden"], "rejoin_at_item_id": "item-d2-lunch", "description": "园林雨天仍开放且别有意境，小雨照常；大雨则改为老街室内茶馆坐到午餐，园林放弃。", "place_id": "place-oldstreet", "requires_booking": false, "instant": true, "cost_delta": "-80 元门票", "time_delta": "无", "verification_status": "estimate"}], "checklist": [{"check_id": "chk-museum-booking", "priority": "must", "deadline": "2026-10-03 20:00", "action": "在示例博物馆官方小程序预约 10 月 10 日 11:00 前后入场名额（2 人，实名）", "status": "todo", "channel": "官方小程序（名称以官网为准）", "related_item_ids": ["item-d1-museum"], "if_unresolved": "执行 alt-museum-fail：第一天 11:00 时段改园林，第二天上午再试"}, {"check_id": "chk-hotel", "priority": "must", "deadline": "2026-10-05", "action": "订老城区住宿一晚，确认可提前寄存行李、退房后可寄存到 15:00；订好后把地址发我更新路段", "status": "todo", "channel": "任意订房渠道", "related_item_ids": ["item-d1-checkin", "item-d2-checkout"], "if_unresolved": "改为站前区住宿，第二天行程需重排"}, {"check_id": "chk-weather", "priority": "should", "deadline": "2026-10-07", "action": "查 10 月 10—11 日示例市天气预报，雨天按 alt-rain-day2 执行", "status": "todo", "channel": "任意天气应用", "related_item_ids": ["item-d2-garden"], "if_unresolved": "按季节参考带薄外套与雨具"}, {"check_id": "chk-recheck", "priority": "should", "deadline": "2026-10-09", "action": "出发前一天再看一眼博物馆公告页是否有临时闭馆", "status": "todo", "channel": "示例博物馆官网公告", "related_item_ids": ["item-d1-museum"], "if_unresolved": "同 alt-museum-fail"}], "weather": {"kind": "seasonal", "entries": [], "note": "行程日期超出可用预报范围，且本次宿主无天气工具。以下为 10 月季节参考，不是预报。", "prep": ["早晚温差大，带薄外套", "备折叠伞", "园林与湖滨步道以步行为主，穿舒适的鞋"]}, "risks": ["博物馆名额紧张，放票当天需准时抢", "所有地铁时长为估算（未用地图工具），已按上界留时", "住宿未订，首末路段会随实际位置变化"], "sources_note": "本文件为 qitianjia-guoqing-quiet-travel 的示例数据，所有地点、来源与规则均为虚构，仅用于演示数据契约与渲染。", "crowd_plan": {"goal": "用片区慢游减少排队和跨城折返（演示）", "checked_at": null, "crowd_risk": "unknown", "road_risk": "unknown", "strategy": ["同片区安排主要活动，减少跨区往返。", "实际国庆出行前须用当年公告和交通信息重新筛选。"], "watch_points": ["景点入口排队与周边道路通行状况待现场核查。"], "recheck": ["目标年份国庆放假安排、景区特别公告和限流。", "出发前与当天的导航路况、停车或公共交通信息。"], "evidence": []}}, "decisions": [{"decision_id": "dec-01", "topic": "博物馆放第一天还是第二天", "options": ["第一天 11:00 时段（预约失败可第二天补）", "第二天上午（返程前时间紧）"], "user_choice": "第一天 11:00 时段", "time": "2026-09-18T14:40:00+08:00", "affected_ids": ["item-d1-museum", "alt-museum-fail"], "note": "用户接受"}, {"decision_id": "dec-02", "topic": "是否启用 TikHub 小红书调研", "options": ["使用已有令牌", "需要注册指导", "这次先不用"], "user_choice": "这次先不用", "time": "2026-09-18T14:05:00+08:00", "affected_ids": [], "note": "本次不再推荐"}], "changelog": [{"version": 1, "at": "2026-09-18T15:00:00+08:00", "summary": "首版：两日行程，条件式方案（待预约、待订房）", "affected_ids": []}]}}</script>
+<script>
+/* 渐进增强：全部正文已在 HTML 中。这里只做：按天切换、滚动进入、勾选记忆与进度、复制、回顶、打印展开。
+   只用 createElement/textContent 建节点，不拼接 HTML 字符串，不发起任何网络请求。任何一步失败都不影响阅读。 */
+(function(){
+  try{ document.documentElement.classList.add('js'); }catch(e){}
+  var $=function(s,r){return (r||document).querySelector(s);}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+
+  /* 滚动进入 */
+  var revealAll=function(){ $$('[data-reveal]').forEach(function(el){ el.classList.add('in'); }); };
+  try{
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+      $$('[data-reveal]').forEach(function(el){ io.observe(el); });
+    }else{ revealAll(); }
+  }catch(e){ revealAll(); }
+
+  /* 按天切换 */
+  var days=$$('.day'), nav=$('#daynav'), buttons=[], activeDay=0;
+  function showDay(idx,animate){
+    activeDay=idx;
+    days.forEach(function(d,i){
+      var show=(idx===-1||i===idx);
+      d.classList.toggle('is-hidden',!show);
+      d.classList.remove('enter');
+      if(show&&animate){ void d.offsetWidth; d.classList.add('enter'); }
+      if(show){ $$('[data-reveal]',d).forEach(function(el){ el.classList.add('in'); }); }
+    });
+    buttons.forEach(function(b,i){ b.setAttribute('aria-pressed',(idx===-1?i===buttons.length-1:i===idx)?'true':'false'); });
+  }
+  try{
+    if(nav&&days.length>1){
+      days.forEach(function(d,i){
+        var b=document.createElement('button'); b.type='button'; b.setAttribute('role','tab');
+        var t1=document.createElement('span'); t1.textContent=d.getAttribute('data-label')||('第'+(i+1)+'天');
+        var t2=document.createElement('small'); t2.textContent=d.getAttribute('data-sub')||'';
+        b.appendChild(t1); if(t2.textContent) b.appendChild(t2);
+        b.addEventListener('click',function(){ showDay(i,true); try{ nav.scrollIntoView({block:'start',behavior:'smooth'}); }catch(e){} });
+        nav.appendChild(b); buttons.push(b);
+      });
+      var all=document.createElement('button'); all.type='button'; all.className='showall'; all.textContent='显示全部';
+      all.addEventListener('click',function(){ showDay(-1,true); });
+      nav.appendChild(all); buttons.push(all);
+      nav.addEventListener('keydown',function(ev){
+        var i=buttons.indexOf(document.activeElement); if(i<0) return;
+        if(ev.key==='ArrowRight'){ buttons[(i+1)%buttons.length].focus(); ev.preventDefault(); }
+        if(ev.key==='ArrowLeft'){ buttons[(i-1+buttons.length)%buttons.length].focus(); ev.preventDefault(); }
+      });
+      var initial=days.findIndex(function(d){return '#'+d.id===window.location.hash;});
+      showDay(initial>=0?initial:0,false);
+      /* 总览里的天卡片 → 切到那一天 */
+      $$('a.dcard').forEach(function(a){
+        a.addEventListener('click',function(ev){
+          var id=(a.getAttribute('href')||'').replace('#',''); var idx=days.findIndex(function(d){return d.id===id;});
+          if(idx>=0){ ev.preventDefault(); showDay(idx,true); try{ nav.scrollIntoView({block:'start',behavior:'smooth'}); }catch(e){} }
+        });
+      });
+    }
+  }catch(e){ try{ showDay(-1,false); }catch(_){} }
+
+  /* 勾选记忆 + 进度。file:// 下 localStorage 不保证可用，失败静默。 */
+  var key='qitianjia-guoqing-quiet-travel:'+(document.body.getAttribute('data-trip')||'')+':'+(document.body.getAttribute('data-version')||'');
+  var boxes=$$('.checklist input[type=checkbox]:not(:disabled)'), saved={};
+  try{ saved=JSON.parse(window.localStorage.getItem(key)||'{}')||{}; }catch(e){ saved={}; }
+  function refresh(){
+    var n=boxes.length, d=0;
+    boxes.forEach(function(b){ var li=b.closest('li'); if(li){ li.classList.toggle('done',b.checked); var state=$('.check-state',li); if(state) state.textContent=b.checked?'（已完成）':'（待办）'; } if(b.checked) d++; });
+    $$('[data-prog]').forEach(function(bar){ bar.style.width=(n?Math.round(d/n*100):0)+'%'; });
+    $$('[data-prog-txt]').forEach(function(txt){ txt.textContent='已完成 '+d+' / '+n; });
+  }
+  boxes.forEach(function(box){
+    try{ if(saved[box.id]===true) box.checked=true; if(saved[box.id]===false) box.checked=false; }catch(e){}
+    box.addEventListener('change',function(){ try{ saved[box.id]=box.checked; window.localStorage.setItem(key,JSON.stringify(saved)); }catch(e){} refresh(); });
+  });
+  setTimeout(refresh,50);
+
+  /* 复制：失败时提示手动选择 */
+  $$('[data-copy]').forEach(function(el){
+    try{
+      var btn=document.createElement('button'); btn.type='button'; btn.className='copy-btn'; btn.textContent='复制';
+      btn.addEventListener('click',function(){
+        var text=el.getAttribute('data-copy')||'';
+        var done=function(){ btn.textContent='已复制'; setTimeout(function(){btn.textContent='复制';},1500); };
+        var fail=function(){ btn.textContent='请手动选择复制'; setTimeout(function(){btn.textContent='复制';},2500); };
+        try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done,fail); } else { fail(); } }catch(e){ fail(); }
+      });
+      el.appendChild(btn);
+    }catch(e){}
+  });
+
+  /* 回到顶部 */
+  try{
+    var top=document.createElement('button'); top.type='button'; top.className='totop'; top.setAttribute('aria-label','回到顶部'); top.textContent='↑';
+    top.addEventListener('click',function(){ try{ window.scrollTo({top:0,behavior:'smooth'}); }catch(e){ window.scrollTo(0,0); } });
+    document.body.appendChild(top);
+    var onScroll=function(){ top.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>600); };
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  }catch(e){}
+
+  /* 打印时展开全部 */
+  try{
+    var printState=null;
+    window.addEventListener('beforeprint',function(){
+      if(!printState) printState={day:activeDay, details:$$('details').map(function(d){return {node:d,open:d.hasAttribute('open')};})};
+      showDay(-1,false); revealAll(); $$('details').forEach(function(d){d.setAttribute('open','');});
+    });
+    window.addEventListener('afterprint',function(){
+      if(!printState) return;
+      showDay(printState.day,false);
+      printState.details.forEach(function(x){if(x.open){x.node.setAttribute('open','');}else{x.node.removeAttribute('open');}});
+      printState=null;
+    });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
