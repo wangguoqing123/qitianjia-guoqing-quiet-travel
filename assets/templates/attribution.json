@@ -1,0 +1,7 @@
+{
+  "_comment": "只读配置。渲染脚本从这里读取署名文字并写入 MD 文末、HTML 页脚、图片卡安全边距；校验脚本据此检查。模型不得临时改写。",
+  "text": "由七天假国庆小众旅行规划 Skill 生成",
+  "brand": "七天假",
+  "skill_name_zh": "七天假国庆小众旅行规划 Skill",
+  "skill_name_en": "qitianjia-guoqing-quiet-travel"
+}
